@@ -40,5 +40,15 @@ namespace TeamProject.Controllers
 
             return View();
         }
+
+        public ActionResult ForgotPassword()
+        {
+            return View();
+        }
+
+        public ActionResult UpdatePassword()
+        {
+            return View();
+        }
     }
 }
