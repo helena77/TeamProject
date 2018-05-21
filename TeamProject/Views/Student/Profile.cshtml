@@ -1,7 +1,25 @@
 ﻿
 @{
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
     ViewBag.Title = "Profile";
 }
 
+<style type="text/css">
+    body {
+        padding: 30px;
+        margin: 30px;
+    }
+</style>
+
 <h2>Profile</h2>
+
+<section>
+
+    <div>
+        <img src="~/Content/Images/student profile.png" align="middle" width="1150" height="650" usemap="#resetPassword">
+        <map name="resetPassword">
+            <area shape="rect" coords="670,280,787,475" href="~/Student/ResetPassword" alt="Profile">
+        </map>
+    </div>
+</section>
 
