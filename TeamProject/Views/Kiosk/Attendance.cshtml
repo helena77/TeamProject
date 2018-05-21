@@ -2,7 +2,6 @@
     ViewBag.Title = "Attendance";
 }
 
-
 <!DOCTYPE html>
 <html>
 <body>
@@ -25,11 +24,10 @@
         </div>
     </div>
 
-
     <!-- date javascript-->
     <script>
-            var dt = new Date();
-            document.getElementById("datetime").innerHTML = (("0" + (dt.getMonth() + 1)).slice(-2)) + "." + (("0" + dt.getDate()).slice(-2)) + "." + (dt.getFullYear());
+        var dt = new Date();
+        document.getElementById("datetime").innerHTML = (("0" + (dt.getMonth() + 1)).slice(-2)) + "." + (("0" + dt.getDate()).slice(-2)) + "." + (dt.getFullYear());
     </script>
 
     <!-- clock html-->
@@ -47,117 +45,100 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
     <script src='//static.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
     <script>
-            $(function () {
+        $(function () {
 
-                // Cache some selectors
+            // Cache some selectors
+            var clock = $('#clock'),
+                alarm = clock.find('.alarm'),
+                ampm = clock.find('.ampm');
 
-                var clock = $('#clock'),
-                    alarm = clock.find('.alarm'),
-                    ampm = clock.find('.ampm');
+            // Map digits to their names (this will be an array)
+            var digit_to_name = 'zero one two three four five six seven eight nine'.split(' ');
 
-                // Map digits to their names (this will be an array)
-                var digit_to_name = 'zero one two three four five six seven eight nine'.split(' ');
+            // This object will hold the digit elements
+            var digits = {};
 
-                // This object will hold the digit elements
-                var digits = {};
+            // Positions for the hours, minutes, and seconds
+            var positions = [
+                'h1', 'h2', ':', 'm1', 'm2', ':', 's1', 's2'
+            ];
 
-                // Positions for the hours, minutes, and seconds
-                var positions = [
-                    'h1', 'h2', ':', 'm1', 'm2', ':', 's1', 's2'
-                ];
+            // Generate the digits with the needed markup,
+            // and add them to the clock
+            var digit_holder = clock.find('.digits');
 
-                // Generate the digits with the needed markup,
-                // and add them to the clock
+            $.each(positions, function () {
 
-                var digit_holder = clock.find('.digits');
+                if (this == ':') {
+                    digit_holder.append('<div class="dots">');
+                }
+                else {
 
-                $.each(positions, function () {
+                    var pos = $('<div>');
 
-                    if (this == ':') {
-                        digit_holder.append('<div class="dots">');
+                    for (var i = 1; i < 8; i++) {
+                        if (window.CP.shouldStopExecution(1)) { break; }
+                        pos.append('<span class="d' + i + '">');
                     }
-                    else {
+                    window.CP.exitedLoop(1);
 
-                        var pos = $('<div>');
+                    // Set the digits as key:value pairs in the digits object
+                    digits[this] = pos;
 
-                        for (var i = 1; i < 8; i++) {
-                            if (window.CP.shouldStopExecution(1)) { break; }
-                            pos.append('<span class="d' + i + '">');
-                        }
-                        window.CP.exitedLoop(1);
-
-
-                        // Set the digits as key:value pairs in the digits object
-                        digits[this] = pos;
-
-                        // Add the digit elements to the page
-                        digit_holder.append(pos);
-                    }
-
-                });
-
-                // Add the weekday names
-
-                var weekday_names = 'MON TUE WED THU FRI SAT SUN'.split(' '),
-                    weekday_holder = clock.find('.weekdays');
-
-                $.each(weekday_names, function () {
-                    weekday_holder.append('<span>' + this + '</span>');
-                });
-
-                var weekdays = clock.find('.weekdays span');
-
-                // Run a timer every second and update the clock
-
-                (function update_time() {
-
-                    // Use moment.js to output the current time as a string
-                    // hh is for the hours in 12-hour format,
-                    // mm - minutes, ss-seconds (all with leading zeroes),
-                    // d is for day of week and A is for AM/PM
-
-                    var now = moment().format("hhmmssdA");
-
-                    digits.h1.attr('class', digit_to_name[now[0]]);
-                    digits.h2.attr('class', digit_to_name[now[1]]);
-                    digits.m1.attr('class', digit_to_name[now[2]]);
-                    digits.m2.attr('class', digit_to_name[now[3]]);
-                    digits.s1.attr('class', digit_to_name[now[4]]);
-                    digits.s2.attr('class', digit_to_name[now[5]]);
-
-                    // The library returns Sunday as the first day of the week.
-                    // Stupid, I know. Lets shift all the days one position down,
-                    // and make Sunday last
-
-                    var dow = now[6];
-                    dow--;
-
-                    // Sunday!
-                    if (dow < 0) {
-                        // Make it last
-                        dow = 6;
-                    }
-
-                    // Mark the active day of the week
-                    weekdays.removeClass('active').eq(dow).addClass('active');
-
-                    // Set the am/pm text:
-                    ampm.text(now[7] + now[8]);
-
-                    // Schedule this function to be run again in 1 sec
-                    setTimeout(update_time, 1000);
-
-                })();
-
-                // Switch the theme
-
-                $('a.button').click(function () {
-                    clock.toggleClass('light dark');
-                });
+                    // Add the digit elements to the page
+                    digit_holder.append(pos);
+                }
 
             });
-    </script>
 
+            // Add the weekday names
+            var weekday_names = 'MON TUE WED THU FRI SAT SUN'.split(' '),
+                weekday_holder = clock.find('.weekdays');
+
+            $.each(weekday_names, function () {
+                weekday_holder.append('<span>' + this + '</span>');
+            });
+
+            var weekdays = clock.find('.weekdays span');
+
+            // Run a timer every second and update the clock
+            (function update_time() {
+                var now = moment().format("hhmmssdA");
+
+                digits.h1.attr('class', digit_to_name[now[0]]);
+                digits.h2.attr('class', digit_to_name[now[1]]);
+                digits.m1.attr('class', digit_to_name[now[2]]);
+                digits.m2.attr('class', digit_to_name[now[3]]);
+                digits.s1.attr('class', digit_to_name[now[4]]);
+                digits.s2.attr('class', digit_to_name[now[5]]);
+
+                // The library returns Sunday as the first day of the week.
+                var dow = now[6];
+                dow--;
+
+                // Sunday!
+                if (dow < 0) {
+                    dow = 6;
+                }
+
+                // Mark the active day of the week
+                weekdays.removeClass('active').eq(dow).addClass('active');
+
+                // Set the am/pm text:
+                ampm.text(now[7] + now[8]);
+
+                // Schedule this function to be run again in 1 sec
+                setTimeout(update_time, 1000);
+
+            })();
+
+            // Switch the theme
+            $('a.button').click(function () {
+                clock.toggleClass('light dark');
+            });
+
+        });
+    </script>
 
     <!-- photo html-->
     <div class="row">
@@ -197,64 +178,61 @@
     <!-- photo html-->
     <script type="text/javascript">
 
-            function transition() {
-                var kira = document.getElementById("kira");
-                if (kira.src.match("http://localhost:49830/Content/Images/girl_cover01.jpg")) {
-                    kira.src = "http://localhost:49830/Content/Images/girl.jpg";
-                } else {
-                    kira.src = "http://localhost:49830/Content/Images/girl_cover01.jpg"
-                }
+        function transition() {
+            var kira = document.getElementById("kira");
+            if (kira.src.match("http://localhost:50159/Content/Images/girl_cover01.jpg")) {
+                kira.src = "http://localhost:50159/Content/Images/girl.jpg";
+            } else {
+                kira.src = "http://localhost:50159/Content/Images/girl_cover01.jpg"
             }
+        }
 
-            function transition2() {
-                var tom = document.getElementById("Tom");
-                if (tom.src.match("http://localhost:49830/Content/Images/man_cover01.jpg")) {
-                    tom.src = "http://localhost:49830/Content/Images/man01.jpg";
-                } else {
-                    tom.src = "http://localhost:49830/Content/Images/man_cover01.jpg"
-                }
+        function transition2() {
+            var tom = document.getElementById("Tom");
+            if (tom.src.match("http://localhost:50159/Content/Images/man_cover01.jpg")) {
+                tom.src = "http://localhost:50159/Content/Images/man01.jpg";
+            } else {
+                tom.src = "http://localhost:50159/Content/Images/man_cover01.jpg"
             }
+        }
 
-            function transition3() {
-                var mary = document.getElementById("Mary");
-                if (mary.src.match("http://localhost:49830/Content/Images/girl_cover03.jpg")) {
-                    mary.src = "http://localhost:49830/Content/Images/girl3.jpg";
-                } else {
-                    mary.src = "http://localhost:49830/Content/Images/girl_cover03.jpg"
-                }
+        function transition3() {
+            var mary = document.getElementById("Mary");
+            if (mary.src.match("http://localhost:50159/Content/Images/girl_cover03.jpg")) {
+                mary.src = "http://localhost:50159/Content/Images/girl3.jpg";
+            } else {
+                mary.src = "http://localhost:50159/Content/Images/girl_cover03.jpg"
             }
+        }
 
-            function transition4() {
-                var kate = document.getElementById("Kate");
-                if (kate.src.match("http://localhost:49830/Content/Images/girl_cover04.jpg")) {
-                    kate.src = "http://localhost:49830/Content/Images/girl04.jpg";
-                } else {
-                    kate.src = "http://localhost:49830/Content/Images/girl_cover04.jpg"
-                }
+        function transition4() {
+            var kate = document.getElementById("Kate");
+            if (kate.src.match("http://localhost:50159/Content/Images/girl_cover04.jpg")) {
+                kate.src = "http://localhost:50159/Content/Images/girl04.jpg";
+            } else {
+                kate.src = "http://localhost:50159/Content/Images/girl_cover04.jpg"
             }
+        }
 
-            function transition5() {
-                var joe = document.getElementById("Joe");
-                if (joe.src.match("http://localhost:49830/Content/Images/man_cover02.jpg")) {
-                    joe.src = "http://localhost:49830/Content/Images/man02.jpg";
-                } else {
-                    joe.src = "http://localhost:49830/Content/Images/man_cover02.jpg"
-                }
+        function transition5() {
+            var joe = document.getElementById("Joe");
+            if (joe.src.match("http://localhost:50159/Content/Images/man_cover02.jpg")) {
+                joe.src = "http://localhost:50159/Content/Images/man02.jpg";
+            } else {
+                joe.src = "http://localhost:50159/Content/Images/man_cover02.jpg"
             }
+        }
 
-            function transition6() {
-                var jane = document.getElementById("Jane");
-                if (jane.src.match("http://localhost:49830/Content/Images/girl_cover05.jpg")) {
-                    jane.src = "http://localhost:49830/Content/Images/girl05.jpg";
-                } else {
-                    jane.src = "http://localhost:49830/Content/Images/girl_cover05.jpg"
-                }
+        function transition6() {
+            var jane = document.getElementById("Jane");
+            if (jane.src.match("http://localhost:50159/Content/Images/girl_cover05.jpg")) {
+                jane.src = "http://localhost:50159/Content/Images/girl05.jpg";
+            } else {
+                jane.src = "http://localhost:50159/Content/Images/girl_cover05.jpg"
             }
+        }
 
     </script>
-
-
-
 
     <!--text style-->
     <style>
@@ -335,7 +313,6 @@
         * {
         }
 
-
         body {
             font: 15px/1.3 Arial, sans-serif;
             z-index: 1;
@@ -410,11 +387,7 @@
                     box-shadow: 0 1px 1px rgba(0,0,0,0.08) inset, 0 1px 1px #fafafa;
                 }
 
-            /*-------------------------
-                The Digits
-            --------------------------*/
-
-
+            /*-----The Digits of clock--------*/
             #clock .digits div {
                 text-align: left;
                 position: relative;
@@ -576,14 +549,12 @@
 
 
             /* 1 */
-
             #clock .digits div.one .d5,
             #clock .digits div.one .d7 {
                 opacity: 1;
             }
 
             /* 2 */
-
             #clock .digits div.two .d1,
             #clock .digits div.two .d5,
             #clock .digits div.two .d2,
@@ -593,7 +564,6 @@
             }
 
             /* 3 */
-
             #clock .digits div.three .d1,
             #clock .digits div.three .d5,
             #clock .digits div.three .d2,
@@ -603,7 +573,6 @@
             }
 
             /* 4 */
-
             #clock .digits div.four .d5,
             #clock .digits div.four .d2,
             #clock .digits div.four .d4,
@@ -612,7 +581,6 @@
             }
 
             /* 5 */
-
             #clock .digits div.five .d1,
             #clock .digits div.five .d2,
             #clock .digits div.five .d4,
@@ -622,7 +590,6 @@
             }
 
             /* 6 */
-
             #clock .digits div.six .d1,
             #clock .digits div.six .d2,
             #clock .digits div.six .d4,
@@ -634,7 +601,6 @@
 
 
             /* 7 */
-
             #clock .digits div.seven .d1,
             #clock .digits div.seven .d5,
             #clock .digits div.seven .d7 {
@@ -642,7 +608,6 @@
             }
 
             /* 8 */
-
             #clock .digits div.eight .d1,
             #clock .digits div.eight .d2,
             #clock .digits div.eight .d3,
@@ -654,7 +619,6 @@
             }
 
             /* 9 */
-
             #clock .digits div.nine .d1,
             #clock .digits div.nine .d2,
             #clock .digits div.nine .d3,
@@ -665,7 +629,6 @@
             }
 
             /* 0 */
-
             #clock .digits div.zero .d1,
             #clock .digits div.zero .d3,
             #clock .digits div.zero .d4,
@@ -675,9 +638,7 @@
                 opacity: 1;
             }
 
-
-            /* The dots */
-
+            /*-----The dots--------*/
             #clock .digits div.dots {
                 width: 5px;
             }
@@ -696,12 +657,7 @@
                     top: 34px;
                 }
 
-
-            /*-------------------------
-                The Alarm
-            --------------------------*/
-
-
+            /*-----The Alarm--------*/
             #clock .alarm {
                 width: 16px;
                 height: 16px;
@@ -715,12 +671,7 @@
                     opacity: 1;
                 }
 
-
-            /*-------------------------
-                Weekdays
-            --------------------------*/
-
-
+            /*-----Weekdays--------*/
             #clock .weekdays {
                 font-size: 12px;
                 position: absolute;
@@ -729,7 +680,6 @@
                 left: 0;
                 text-align: center;
             }
-
 
                 #clock .weekdays span {
                     opacity: 0.2;
@@ -741,11 +691,7 @@
                     }
 
 
-            /*-------------------------
-                    AM/PM
-            --------------------------*/
-
-
+            /*-----AM/PM--------*/
             #clock .ampm {
                 position: absolute;
                 bottom: 20px;

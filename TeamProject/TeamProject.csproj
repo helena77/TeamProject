@@ -164,6 +164,18 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\girl.jpg" />
+    <Content Include="Content\Images\girl04.jpg" />
+    <Content Include="Content\Images\girl05.jpg" />
+    <Content Include="Content\Images\girl3.jpg" />
+    <Content Include="Content\Images\girl_cover01.jpg" />
+    <Content Include="Content\Images\girl_cover03.jpg" />
+    <Content Include="Content\Images\girl_cover04.jpg" />
+    <Content Include="Content\Images\girl_cover05.jpg" />
+    <Content Include="Content\Images\man01.jpg" />
+    <Content Include="Content\Images\man02.jpg" />
+    <Content Include="Content\Images\man_cover01.jpg" />
+    <Content Include="Content\Images\man_cover02.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
