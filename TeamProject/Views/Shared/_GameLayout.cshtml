@@ -31,19 +31,25 @@
         <hr />
         <footer>
             <div class="footer navbar-fixed-bottom">
-                <div style="background-color:white">
-                    <div class="col-md-3"></div>
-
-                    Copyrights &nbsp;&nbsp;&copy; @DateTime.Now.Year U-High Team All rights reserved
-                    &nbsp;&nbsp;
-                    @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })
-                    @Html.ActionLink("Privacy", "Privacy", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })
-                    @Html.ActionLink("Contact", "Contact", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })
-                    @Html.ActionLink("Help", "Help", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })
+                <div style="background-color:coral">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2" style="font-size:large">
+                        @Html.ActionLink("Play", "Play", "Student", new { controller = "Student" }, new { @class = "btn btn-link" })
+                    </div>
+                    <div class="col-md-2" style="font-size:large">
+                        @Html.ActionLink("PrizeTomb", "PrizeTomb", "Student", new { controller = "Student" }, new { @class = "btn btn-link" })
+                    </div>
+                    <div class="col-md-2" style="font-size:large">
+                        @Html.ActionLink("PrizeDex", "PrizeDex", "Student", new { controller = "Stuent" }, new { @class = "btn btn-link" })
+                    </div>
+                    <div class="col-md-2" style="font-size:large">
+                        @Html.ActionLink("CoinBank", "CoinBank", "Student", new { controller = "Student" }, new { @class = "btn btn-link" })
+                    </div>
+                    <div class="col-md-2"></div>
                 </div>
             </div>
+        </footer>
     </div>
-    </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
