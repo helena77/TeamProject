@@ -51,7 +51,7 @@ namespace TeamProject.Controllers
 
 
         // GET: WorldTour Level Seattle
-        public ActionResult Seattle()
+        public ActionResult Play()
         {
             return View();
         }
