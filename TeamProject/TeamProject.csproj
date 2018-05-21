@@ -164,7 +164,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Images\calendar.PNG" />
+    <Content Include="Content\Images\calendar.png" />
     <Content Include="Content\Images\girl.jpg" />
     <Content Include="Content\Images\girl04.jpg" />
     <Content Include="Content\Images\girl05.jpg" />
@@ -177,7 +177,8 @@
     <Content Include="Content\Images\man02.jpg" />
     <Content Include="Content\Images\man_cover01.jpg" />
     <Content Include="Content\Images\man_cover02.jpg" />
-    <Content Include="Content\Images\student profile.PNG" />
+    <Content Include="Content\Images\record.png" />
+    <Content Include="Content\Images\student profile.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
