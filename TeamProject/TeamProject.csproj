@@ -179,6 +179,11 @@
     <Content Include="Content\Images\man_cover02.jpg" />
     <Content Include="Content\Images\Report.png" />
     <Content Include="Content\Images\student profile.PNG" />
+    <Content Include="Content\Pages\Admin Registration.png" />
+    <Content Include="Content\Pages\Forgot Password1.png" />
+    <Content Include="Content\Pages\Forgot Password2.png" />
+    <Content Include="Content\Pages\Home Page.png" />
+    <Content Include="Content\Pages\Kiosk.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -233,6 +238,8 @@
     <Content Include="Views\Shared\_EmptyLayout.cshtml" />
     <Content Include="Views\Shared\_GameLayout.cshtml" />
     <Content Include="Views\Student\Dashboard.cshtml" />
+    <Content Include="Views\Home\ForgotPassword.cshtml" />
+    <Content Include="Views\Home\UpdatePassword.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
