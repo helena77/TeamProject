@@ -165,9 +165,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\admin setting.png" />
-    <Content Include="Content\Images\Building.png" />
     <Content Include="Content\Images\calendar.PNG" />
-    <Content Include="Content\Images\CoinBank.png" />
     <Content Include="Content\Images\girl.jpg" />
     <Content Include="Content\Images\girl04.jpg" />
     <Content Include="Content\Images\girl05.jpg" />
@@ -176,16 +174,12 @@
     <Content Include="Content\Images\girl_cover03.jpg" />
     <Content Include="Content\Images\girl_cover04.jpg" />
     <Content Include="Content\Images\girl_cover05.jpg" />
-    <Content Include="Content\Images\Instructions.png" />
     <Content Include="Content\Images\man01.jpg" />
     <Content Include="Content\Images\man02.jpg" />
     <Content Include="Content\Images\man_cover01.jpg" />
     <Content Include="Content\Images\man_cover02.jpg" />
-    <Content Include="Content\Images\PrizeDex.png" />
-    <Content Include="Content\Images\PrizeTomb.png" />
     <Content Include="Content\Images\record.png" />
     <Content Include="Content\Images\Report.png" />
-    <Content Include="Content\Images\Seattle.png" />
     <Content Include="Content\Images\student profile.PNG" />
     <Content Include="Content\Images\WorldTour\Building.png" />
     <Content Include="Content\Images\WorldTour\CoinBank.png" />
