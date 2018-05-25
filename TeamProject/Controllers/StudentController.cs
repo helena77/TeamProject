@@ -9,6 +9,15 @@ namespace TeamProject.Controllers
     public class StudentController : Controller
     {
 
+        /***** Added Thursday 5/24 by Vic *****/
+        // Call StudentView Model 
+        private Models.StudentViews StudentView = new Models.StudentViews();
+        /***** Added Thursday 5/24 by Vic *****/
+
+
+
+
+
         // GET: Student Index
         public ActionResult Dashboard()
         {
@@ -26,7 +35,7 @@ namespace TeamProject.Controllers
         // GET: Student Access to the WorldTour Game
         public ActionResult Game()
         {
-            return View();
+            return View(StudentView);
         }
 
 
@@ -46,35 +55,35 @@ namespace TeamProject.Controllers
         // GET: WorldTour Select Building
         public ActionResult Select()
         {
-            return View();
+            return View(StudentView);
         }
 
 
         // GET: WorldTour Level Seattle
         public ActionResult Play()
         {
-            return View();
+            return View(StudentView);
         }
 
 
         // GET: WorldTour PrizeTomb
         public ActionResult PrizeTomb()
         {
-            return View();
+            return View(StudentView);
         }
 
 
         // GET: WorldTour Prize Index
         public ActionResult PrizeDex()
         {
-            return View();
+            return View(StudentView);
         }
 
 
         // GET: WorldTour Coin Bank
         public ActionResult CoinBank()
         {
-            return View();
+            return View(StudentView);
         }
     }
 }
