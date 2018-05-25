@@ -152,6 +152,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Backend\PictureBackend.cs" />
+    <Compile Include="Backend\PictureDataSourceMock.cs" />
+    <Compile Include="Backend\PictureInterface.cs" />
+    <Compile Include="Backend\StudentBackend.cs" />
+    <Compile Include="Backend\StudentDataSourceMock.cs" />
+    <Compile Include="Backend\StudentInterface.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KioskController.cs" />
@@ -159,14 +165,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Enum\DataSourceEnum.cs" />
+    <Compile Include="Models\Enum\StudentStatusEnum.cs" />
+    <Compile Include="Models\PictureModel.cs" />
+    <Compile Include="Models\PIctureViewModel.cs" />
+    <Compile Include="Models\StudentModel.cs" />
+    <Compile Include="Models\StudentViewModel.cs" />
+    <Compile Include="Models\SystemGlobals.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\admin setting.png" />
+    <Content Include="Content\Images\defaultboy.png" />
     <Content Include="Content\Images\calendar.PNG" />
     <Content Include="Content\Images\girl.jpg" />
+    <Content Include="Content\Images\defaultgirl.png" />
     <Content Include="Content\Images\girl04.jpg" />
     <Content Include="Content\Images\girl05.jpg" />
     <Content Include="Content\Images\girl3.jpg" />
@@ -258,7 +273,21 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\DataSourceEnum\" />
+    <Folder Include="Views\PictureBackend\" />
+    <Folder Include="Views\PictureDataSourceMock\" />
+    <Folder Include="Views\PictureInterface\" />
+    <Folder Include="Views\PictureModel\" />
+    <Folder Include="Views\PIctureViewModel\" />
+    <Folder Include="Views\StudentBackend\" />
+    <Folder Include="Views\StudentDataSourceMock\" />
+    <Folder Include="Views\StudentImageBackend\" />
+    <Folder Include="Views\StudentImageInterface\" />
+    <Folder Include="Views\StudentInterface\" />
+    <Folder Include="Views\StudentModel\" />
+    <Folder Include="Views\StudentStatusEnum\" />
+    <Folder Include="Views\StudentViewModel\" />
+    <Folder Include="Views\SystemGlobals\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
