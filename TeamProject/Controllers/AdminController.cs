@@ -63,6 +63,54 @@ namespace TeamProject.Controllers
             return View(myData);
         }
 
+        /// <summary>
+        /// This opens up the make a new Student screen
+        /// </summary>
+        /// <returns></returns>
+        // GET: Admin/Create
+        public ActionResult Create()
+        {
+            var myData = new StudentModel();
+            return View(myData);
+        }
+
+        /// <summary>
+        /// Make a new Student sent in by the create Admin screen
+        /// </summary>
+        /// <param name="collection"></param>
+        /// <returns></returns>
+        // POST: Admin/Create
+        [HttpPost]
+        public ActionResult Create([Bind(Include=
+                                        "Id,"+
+                                        "Name,"+
+                                        "PictureId,"+
+                                        "Status,"+
+                                        "")] StudentModel data)
+        {
+            if (!ModelState.IsValid)
+            {
+                // Send back for edit
+                return View(data);
+            }
+
+            if (data == null)
+            {
+                // Send to Error Page
+                return RedirectToAction("Error", new { route = "Home", action = "Error" });
+            }
+
+            if (string.IsNullOrEmpty(data.Id))
+            {
+                // Return back for Edit
+                return View(data);
+            }
+
+            StudentBackend.Create(data);
+
+            return RedirectToAction("Students");
+        }
+
         public ActionResult Report()
         {
             return View();

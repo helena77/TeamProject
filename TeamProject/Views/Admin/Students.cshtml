@@ -11,28 +11,35 @@
     <div class="row text-center">
         <div class="col-sm-12">
             @{
-                if (Model.StudentList == null || !Model.StudentList.Any())
-                {
-                    <br />
-                    <p>No Students in the System</p>
-                    <br />
-                }
-                else
-                {
-                    foreach (var item in Model.StudentList)
-                    {
-                        <div class="col-sm-3">
-                            <a id="@item.Id" href="~/Admin/Read/@item.Id">
-                                <img src="~/Content/Images/@item.PictureUri" width="150" height="150" />
-                                <br />
-                                <span>
-                                    @item.Name
-                                </span>
-                            </a>
-                        </div>
-                    }
-                }
+            if (Model.StudentList == null || !Model.StudentList.Any())
+            {
+                <br />
+                <p>No Students in the System</p>
+                <br />
+        }
+        else
+        {
+            foreach (var item in Model.StudentList)
+            {
+                <div class="col-sm-3">
+                    <a id="@item.Id" href="~/Admin/Read/@item.Id">
+                        <img src="~/Content/Images/@item.PictureUri" width="150" height="150" />
+                        <br />
+                        <span>
+                            @item.Name
+                        </span>
+                    </a>
+                </div>
+        }
+    }
             }
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-sm-2">
+                @Html.ActionLink("Create", "Create", null, new { @class = "btn btn-success" })
+            </div>
         </div>
     </div>
 </div>

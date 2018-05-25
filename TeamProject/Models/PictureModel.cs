@@ -17,6 +17,10 @@ namespace TeamProject.Models
         [Required(ErrorMessage = "Id is required")]
         public string Id { get; set; }
 
+        [Display(Name = "Name", Description = "Picture Name")]
+        [Required(ErrorMessage = "Picture Name is required")]
+        public string Name { get; set; }
+
         [Display(Name = "Uri", Description = "Picture to Show")]
         [Required(ErrorMessage = "Picture is required")]
         public string Uri { get; set; }
@@ -41,10 +45,10 @@ namespace TeamProject.Models
         /// Make an Picture from values passed in
         /// </summary>
         /// <param name="uri">The Picture path</param>
-        public PictureModel(string uri)
+        public PictureModel(string uri, string name)
         {
             Initialize();
-
+            Name = name;
             Uri = uri;
         }
 
@@ -59,7 +63,7 @@ namespace TeamProject.Models
             {
                 return;
             }
-
+            Name = data.Name;
             Uri = data.Uri;
         }
     }

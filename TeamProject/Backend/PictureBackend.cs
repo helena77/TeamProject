@@ -182,6 +182,7 @@ namespace TeamProject.Backend
 
             var myReturn = myDataList.Select(a => new SelectListItem
             {
+                Text = a.Name,
                 Value = a.Id,
                 Selected = (a.Id == id),
             }).ToList();
