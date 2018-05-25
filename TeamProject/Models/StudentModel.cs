@@ -30,11 +30,11 @@ namespace TeamProject.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The ID of the Avatar the student is associated with, this will convert to an avatar picture
+        /// The ID of the Picture the student is associated with, this will convert to a picture
         /// </summary>
         [Display(Name = "PictureId", Description = "Picture")]
         [Required(ErrorMessage = "Picture is required")]
-        public string AvatarId { get; set; }
+        public string PictureId { get; set; }
 
         /// <summary>
         /// The status of the student, for example currently logged in, out
@@ -64,19 +64,19 @@ namespace TeamProject.Models
         /// Constructor for Student.  Call this when making a new student
         /// </summary>
         /// <param name="name">The Name to call the student</param>
-        /// <param name="avatarId">The avatar to use, if not specified, will call the backend to get an ID</param>
-        public StudentModel(string name, string avatarId)
+        /// <param name="avatarId">The picture to use, if not specified, will call the backend to get an ID</param>
+        public StudentModel(string name, string pictureId)
         {
             Initialize();
 
             Name = name;
 
-            // If no avatar ID is sent in, then go and get the first avatar ID from the backend data as the default to use.
-            if (string.IsNullOrEmpty(avatarId))
+            // If no picture ID is sent in, then go and get the first picture ID from the backend data as the default to use.
+            if (string.IsNullOrEmpty(pictureId))
             {
-                avatarId = PictureBackend.Instance.GetFirstPictureId();
+                pictureId = PictureBackend.Instance.GetFirstPictureId();
             }
-            AvatarId = avatarId;
+            PictureId = pictureId;
         }
 
         /// <summary>
@@ -104,9 +104,7 @@ namespace TeamProject.Models
             }
 
             Name = data.Name;
-            AvatarId = data.AvatarId;
-            AvatarLevel = data.AvatarLevel;
-            Tokens = data.Tokens;
+            PictureId = data.PictureId;
             Status = data.Status;
 
             return true;
@@ -114,27 +112,15 @@ namespace TeamProject.Models
     }
 
     /// <summary>
-    /// For the Index View, add the Avatar URI to the Student, so it shows the student with the picture
+    /// For the Index View, add the Picture URI to the Student, so it shows the student with the picture
     /// </summary>
     public class StudentDisplayViewModel : StudentModel
     {
         /// <summary>
-        /// The path to the local image for the avatar
+        /// The path to the local image for the picture
         /// </summary>
-        [Display(Name = "Avatar Picture", Description = "Avatar Picture to Show")]
-        public string AvatarUri { get; set; }
-
-        /// <summary>
-        /// Display name for the Avatar on the student information (Friendly Police etc.)
-        /// </summary>
-        [Display(Name = "Avatar Name", Description = "Avatar Name")]
-        public string AvatarName { get; set; }
-
-        /// <summary>
-        /// Description of the Avatar to show on the student information
-        /// </summary>
-        [Display(Name = "Avatar Description", Description = "Avatar Description")]
-        public string AvatarDescription { get; set; }
+        [Display(Name = "Picture Image", Description = "Picture to Show")]
+        public string PictureUri { get; set; }
 
         /// <summary>
         /// Default constructor
@@ -158,10 +144,7 @@ namespace TeamProject.Models
                 // Nothing to convert
                 return;
             }
-
-            AvatarName = myDataAvatar.Name;
-            AvatarDescription = myDataAvatar.Description;
-            AvatarUri = myDataAvatar.Uri;
+            PictureUri = myPicture.Uri;
         }
     }
 }
