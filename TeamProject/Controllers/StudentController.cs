@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace TeamProject.Controllers
 {
+    // Controller for Student class
     public class StudentController : Controller
     {
 
