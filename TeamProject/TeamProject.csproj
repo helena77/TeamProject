@@ -273,21 +273,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\DataSourceEnum\" />
-    <Folder Include="Views\PictureBackend\" />
-    <Folder Include="Views\PictureDataSourceMock\" />
-    <Folder Include="Views\PictureInterface\" />
-    <Folder Include="Views\PictureModel\" />
-    <Folder Include="Views\PIctureViewModel\" />
-    <Folder Include="Views\StudentBackend\" />
-    <Folder Include="Views\StudentDataSourceMock\" />
-    <Folder Include="Views\StudentImageBackend\" />
-    <Folder Include="Views\StudentImageInterface\" />
-    <Folder Include="Views\StudentInterface\" />
-    <Folder Include="Views\StudentModel\" />
-    <Folder Include="Views\StudentStatusEnum\" />
-    <Folder Include="Views\StudentViewModel\" />
-    <Folder Include="Views\SystemGlobals\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
