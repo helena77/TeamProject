@@ -25,14 +25,34 @@
 </style>
 
 
-@* Display The World Tour Title *@
-<h1>World Tour</h1>
+@* Display The World Tour Page Title *@
+<h1>Select Your Building</h1>
 
 
 @* Display Select Gamepiece Page *@
-<h2>Select</h2>
+<h2>Pick the Building for Your Avatar on Level 1</h2>
+
+@* Explain the Gamepiece *@
+<h3>Your Building will Grow Faster the More Coins You Earn</h3>
 
 
 @* World Tour Select Gamepiece image *@
+<!DOCTYPE html>
+<html>
+<body>
+    <img src="~/Content/Images/WorldTour/Building.png" style="max-width:100%;height:auto;" alt="World Tour" usemap="#Building">
+    <map name="Building">
+        <area shape="rect" coords="110, 670, 250, 720" href="~/Student/Play" alt="Play">
+        <area shape="rect" coords="770, 670, 910, 720" href="~/Student/Play" alt="Play">
+        <area shape="rect" coords="1420, 670, 1560, 720" href="~/Student/Play" alt="Play">
+        <area shape="rect" coords="2600, 670, 2200, 720" href="~/Student/Play" alt="Play">
+        <area shape="rect" coords="290, 1260, 430, 1330" href="~/Student/Play" alt="Play">
+        <area shape="rect" coords="1150, 1260, 1310, 1330" href="~/Student/Play" alt="Play">
+        <area shape="rect" coords="1950, 1260, 2090, 1330" href="~/Student/Play" alt="Play">
+    </map>
+</body>
+</html>
+
+
 <img class="img-fluid" src="~/Content/Images/WorldTour/Building.png" style="max-width:100%;height:auto;" alt="World Tour">
 
