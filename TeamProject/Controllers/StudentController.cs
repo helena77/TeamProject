@@ -24,7 +24,6 @@ namespace TeamProject.Controllers
         }
 
 
-        // GET: Student Profile
         public ActionResult Profile()
         {
             return View();

@@ -272,6 +272,10 @@
     <Content Include="Views\Student\PrizeDex.cshtml" />
     <Content Include="Views\Student\PrizeTomb.cshtml" />
     <Content Include="Views\Student\Select.cshtml" />
+    <Content Include="Views\Admin\Read.cshtml" />
+    <Content Include="Views\Admin\Create.cshtml" />
+    <Content Include="Views\Admin\Update.cshtml" />
+    <Content Include="Views\Admin\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

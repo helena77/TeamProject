@@ -40,6 +40,29 @@ namespace TeamProject.Controllers
             return View(StudentViewModel);
         }
 
+        /// <summary>
+        /// Read information on a single Student
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        // GET: Admin/Read/
+        public ActionResult Read(string id = null)
+        {
+            var myDataStudent = StudentBackend.Read(id);
+            if (myDataStudent == null)
+            {
+                RedirectToAction("Error", "Home", "Invalid Record");
+            }
+
+            var myData = new StudentDisplayViewModel(myDataStudent);
+            if (myData == null)
+            {
+                RedirectToAction("Error", "Home", "Invalid Record");
+            }
+
+            return View(myData);
+        }
+
         public ActionResult Report()
         {
             return View();

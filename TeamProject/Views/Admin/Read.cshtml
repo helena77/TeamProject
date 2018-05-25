@@ -1,0 +1,73 @@
+﻿@model TeamProject.Models.StudentDisplayViewModel
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewBag.Title = "Student Info";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            @{
+        if (Model == null)
+        {
+            <p>No Student</p>
+}
+
+else
+{
+        <div class="row">
+            <h2>@Model.Name Student Info</h2>
+            <br />
+            <br />
+
+            <div class="row">
+                <div class="col-sm-3 text-right">
+                </div>
+                <div class="col-sm-2">
+                    <img src="~/Content/Images/default.png" width="75" height="75" />
+                    <br />
+                    <span>
+                        @Model.Name
+                        <br />
+                        <br />
+                        <br />
+                    </span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3 text-right">
+                    @Html.DisplayNameFor(m => m.Name)
+                </div>
+                <div class="col-sm-2">
+                    @Html.DisplayFor(m => m.Name)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 text-right">
+                    @Html.DisplayNameFor(m => m.Status)
+                </div>
+                <div class="col-sm-2">
+                    @Html.DisplayFor(x => x.Status)
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-8">
+                @Html.ActionLink("Cancel", "Students", new { id = Model.Id }, new { @class = "btn btn-success" })
+                @Html.ActionLink("Update", "Update", new { id = Model.Id }, new { @class = "btn btn-primary" })
+                @Html.ActionLink("Delete", "Delete", new { id = Model.Id }, new { @class = "btn btn-danger" })
+            </div>
+        </div>
+}
+            }
+        </div>
+    </div>
+</div>
+
