@@ -49,7 +49,6 @@ namespace TeamProject.Models
         public void Initialize()
         {
             Id = Guid.NewGuid().ToString();
-            
             Status = StudentStatusEnum.Out;
         }
 

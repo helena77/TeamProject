@@ -111,7 +111,126 @@ namespace TeamProject.Controllers
             return RedirectToAction("Students");
         }
 
-        public ActionResult Report()
+        /// <summary>
+        /// This will show the details of the Student to update
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        // GET: Admin/Update/
+        public ActionResult Update(string id = null)
+        {
+            var myDataStudent = StudentBackend.Read(id);
+            if (myDataStudent == null)
+            {
+                RedirectToAction("Error", "Home", "Invalid Record");
+            }
+
+            var myData = new StudentDisplayViewModel(myDataStudent);
+            if (myData == null)
+            {
+                RedirectToAction("Error", "Home", "Invalid Record");
+            }
+            return View(myData);
+        }
+
+        /// <summary>
+        /// This updates the Student based on the information posted from the udpate page
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        // POST: Admin/Update/
+        [HttpPost]
+        public ActionResult Update([Bind(Include=
+                                        "Id,"+
+                                        "Name,"+
+                                        "PictureId,"+
+                                        "Status,"+
+                                        "")] StudentDisplayViewModel data)
+        {
+            if (!ModelState.IsValid)
+            {
+                // Send back for edit
+                return View(data);
+            }
+
+            if (data == null)
+            {
+                // Send to Error Page
+                return RedirectToAction("Error", new { route = "Home", action = "Error" });
+            }
+
+            if (string.IsNullOrEmpty(data.Id))
+            {
+                // Send back for edit
+                return View(data);
+            }
+
+            var myDataStudent = new StudentModel(data);
+            StudentBackend.Update(myDataStudent);
+
+            return RedirectToAction("Students");
+        }
+
+        /// <summary>
+        /// This shows the Student info to be deleted
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        // GET: Student/Delete/
+        public ActionResult Delete(string id = null)
+        {
+            var myDataStudent = StudentBackend.Read(id);
+            if (myDataStudent == null)
+            {
+                RedirectToAction("Error", "Home", "Invalid Record");
+            }
+
+            var myData = new StudentDisplayViewModel(myDataStudent);
+            if (myData == null)
+            {
+                RedirectToAction("Error", "Home", "Invalid Record");
+            }
+
+            return View(myData);
+        }
+
+        /// <summary>
+        /// This deletes the Student sent up as a post from the Student delete page
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        // POST: Student/Delete/5
+        [HttpPost]
+        public ActionResult Delete([Bind(Include=
+                                        "Id,"+
+                                        "Name,"+
+                                        "PictureId,"+
+                                        "Uri,"+
+                                        "")] StudentDisplayViewModel data)
+        {
+            if (!ModelState.IsValid)
+            {
+                // Send back for edit
+                return View(data);
+            }
+            if (data == null)
+            {
+                // Send to Error page
+                return RedirectToAction("Error", new { route = "Home", action = "Error" });
+            }
+
+            if (string.IsNullOrEmpty(data.Id))
+            {
+                // Send back for Edit
+                return View(data);
+            }
+
+            StudentBackend.Delete(data.Id);
+
+            return RedirectToAction("Students");
+        }
+
+    public ActionResult Report()
         {
             return View();
         }
