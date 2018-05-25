@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TeamProject.Models;
+using TeamProject.Backend;
 
 namespace TeamProject.Controllers
 {
     // Controller for Student class
     public class StudentController : Controller
     {
+        // A ViewModel used for the Student that contains the StudentList
+        private StudentViewModel StudentViewModel = new StudentViewModel();
 
+        // The Backend Data source
+        private StudentBackend StudentBackend = StudentBackend.Instance;
 
         // GET: Student Index
         public ActionResult Dashboard()

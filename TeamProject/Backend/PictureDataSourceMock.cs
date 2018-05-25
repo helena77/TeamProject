@@ -130,14 +130,7 @@ namespace TeamProject.Backend
         /// </summary>
         public void Initialize()
         {
-            Create(new PictureModel("defaultboy.png"));
-            Create(new PictureModel("defaultgirl.png"));
-            Create(new PictureModel("defaultboy.png"));
-            Create(new PictureModel("defaultgirl.png"));
-            Create(new PictureModel("defaultboy.png"));
-            Create(new PictureModel("defaultgirl.png"));
-            Create(new PictureModel("defaultboy.png"));
-            Create(new PictureModel("defaultgirl.png"));
+            Create(new PictureModel("default.png"));
             Create(new PictureModel("defaultboy.png"));
             Create(new PictureModel("defaultgirl.png"));
         }
