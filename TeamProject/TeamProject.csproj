@@ -170,6 +170,7 @@
     <Compile Include="Models\PictureModel.cs" />
     <Compile Include="Models\PIctureViewModel.cs" />
     <Compile Include="Models\StudentModel.cs" />
+    <Compile Include="Models\StudentPictureModel.cs" />
     <Compile Include="Models\StudentViewModel.cs" />
     <Compile Include="Models\SystemGlobals.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
