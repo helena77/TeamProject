@@ -241,6 +241,16 @@ namespace TeamProject.Controllers
             return View();
         }
 
+        public ActionResult Registeradmin()
+        {
+            return View();
+        }
+
+        public ActionResult Overwritedata()
+        {
+            return View();
+        }
+
         public ActionResult Calendar()
         {
             return View();
