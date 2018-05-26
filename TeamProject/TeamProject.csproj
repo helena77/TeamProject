@@ -213,6 +213,7 @@
     <Content Include="Content\Pages\Forgot Password2.png" />
     <Content Include="Content\Pages\Home Page.png" />
     <Content Include="Content\Pages\Kiosk.png" />
+    <Content Include="Content\Pages\logo.png" />
     <Content Include="Content\Pages\report.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
