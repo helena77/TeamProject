@@ -46,7 +46,7 @@ namespace TeamProject.Models
         /// <summary>
         /// The ID of the Picture the student is associated with, this will convert to a picture
         /// </summary>
-        [Display(Name = "PictureId", Description = "Picture")]
+        [Display(Name = "Picture", Description = "Picture")]
         [Required(ErrorMessage = "Picture is required")]
         public string PictureId { get; set; }
 
