@@ -26,6 +26,24 @@
         </div>
         <div class="row">
             <div class="col-sm-3 text-right">
+                @Html.DisplayNameFor(m => m.LastName)
+            </div>
+            <div class="col-sm-2">
+                @Html.EditorFor(m => m.LastName)
+                @Html.ValidationMessageFor(m => m.LastName)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 text-right">
+                @Html.DisplayNameFor(m => m.Email)
+            </div>
+            <div class="col-sm-2">
+                @Html.EditorFor(m => m.Email)
+                @Html.ValidationMessageFor(m => m.Email)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 text-right">
                 @Html.DisplayNameFor(m => m.PictureId)
             </div>
             <div class="col-sm-2">

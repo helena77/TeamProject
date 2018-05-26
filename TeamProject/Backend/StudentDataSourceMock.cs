@@ -130,16 +130,16 @@ namespace TeamProject.Backend
         /// </summary>
         public void Initialize()
         {
-            Create(new StudentModel("Joe", null));
-            Create(new StudentModel("Jenny", null));
-            Create(new StudentModel("Erica", null));
-            Create(new StudentModel("Helena", null));
-            Create(new StudentModel("Daniel", null));
-            Create(new StudentModel("Victor", null));
-            Create(new StudentModel("Kyle", null));
-            Create(new StudentModel("Raelee", null));
-            Create(new StudentModel("Cristian", null));
-            Create(new StudentModel("Jack", null));
+            Create(new StudentModel("Joe", "Seo", "seow@seattleu.edu", null));
+            Create(new StudentModel("Jenny", "Moon", "moonj@seattleu.edu", null));
+            Create(new StudentModel("Erica", "Chen", "chene@seattleu.edu", null));
+            Create(new StudentModel("Helena", "Wang","wangh@seattleu.edu", null));
+            Create(new StudentModel("Daniel", "Deng", "dengd@seattleu.edu", null));
+            Create(new StudentModel("Victor", "Chimenti", "chimentiv@seattleu.edu", null));
+            Create(new StudentModel("Kyle", "Tible", "tiblek@seattleu.edu", null));
+            Create(new StudentModel("Raelee","Reiger", "reigerr@seattleu.edu", null));
+            Create(new StudentModel("Cristina", "Chen", "chenc@seattleu.edu", null));
+            Create(new StudentModel("Jack", "Joesph", "josephj@seattleu.edu", null));
         }
     }
 }

@@ -84,6 +84,8 @@ namespace TeamProject.Controllers
         public ActionResult Create([Bind(Include=
                                         "Id,"+
                                         "Name,"+
+                                        "LastName,"+
+                                        "Email,"+
                                         "PictureId,"+
                                         "Status,"+
                                         "")] StudentModel data)
@@ -143,6 +145,8 @@ namespace TeamProject.Controllers
         public ActionResult Update([Bind(Include=
                                         "Id,"+
                                         "Name,"+
+                                        "LastName,"+
+                                        "Email,"+
                                         "PictureId,"+
                                         "Status,"+
                                         "")] StudentDisplayViewModel data)
@@ -204,6 +208,8 @@ namespace TeamProject.Controllers
         public ActionResult Delete([Bind(Include=
                                         "Id,"+
                                         "Name,"+
+                                        "LastName,"+
+                                        "Email,"+
                                         "PictureId,"+
                                         "Uri,"+
                                         "")] StudentDisplayViewModel data)

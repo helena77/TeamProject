@@ -23,11 +23,25 @@ namespace TeamProject.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// The name for the student, but does not need to be directly associated with the actual student name
+        /// The first name for the student, but does not need to be directly associated with the actual student name
         /// </summary>
         [Display(Name = "Name", Description = "Name")]
         [Required(ErrorMessage = "Name is required")]
         public string Name { get; set; }
+
+        /// <summary>
+        /// The last name for the student, but does not need to be directly associated with the actual student name
+        /// </summary>
+        [Display(Name = "Last Name", Description = "Last Name")]
+        [Required(ErrorMessage = "Name is required")]
+        public string LastName { get; set; }
+
+        /// <summary>
+        /// The email of the student
+        /// </summary>
+        [Display(Name = "Email", Description = "Email")]
+        [Required(ErrorMessage = "Email is required")]
+        public string Email { get; set; }
 
         /// <summary>
         /// The ID of the Picture the student is associated with, this will convert to a picture
@@ -65,11 +79,12 @@ namespace TeamProject.Models
         /// </summary>
         /// <param name="name">The Name to call the student</param>
         /// <param name="avatarId">The picture to use, if not specified, will call the backend to get an ID</param>
-        public StudentModel(string name, string pictureId)
+        public StudentModel(string name, string lastname, string email, string pictureId)
         {
             Initialize();
-
+            Email = email;
             Name = name;
+            LastName = lastname;
 
             // If no picture ID is sent in, then go and get the first picture ID from the backend data as the default to use.
             if (string.IsNullOrEmpty(pictureId))
@@ -87,6 +102,8 @@ namespace TeamProject.Models
         {
             Id = data.Id;
             Name = data.Name;
+            LastName = data.LastName;
+            Email = data.Email;
             PictureId = data.PictureId;
             Status = data.Status;
         }
@@ -104,6 +121,8 @@ namespace TeamProject.Models
             }
 
             Name = data.Name;
+            LastName = data.LastName;
+            Email = data.Email;
             PictureId = data.PictureId;
             Status = data.Status;
 
@@ -135,6 +154,8 @@ namespace TeamProject.Models
         {
             Id = data.Id;
             Name = data.Name;
+            LastName = data.LastName;
+            Email = data.Email;
             PictureId = data.PictureId;
             Status = data.Status;
 
