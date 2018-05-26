@@ -179,6 +179,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\admin setting.png" />
+    <Content Include="Content\Images\defaultboy1.png" />
     <Content Include="Content\Images\default.png" />
     <Content Include="Content\Images\defaultboy.png" />
     <Content Include="Content\Images\calendar.PNG" />
@@ -186,6 +187,7 @@
     <Content Include="Content\Images\defaultgirl.png" />
     <Content Include="Content\Images\girl04.jpg" />
     <Content Include="Content\Images\girl05.jpg" />
+    <Content Include="Content\Images\defaultgirl1.png" />
     <Content Include="Content\Images\girl3.jpg" />
     <Content Include="Content\Images\girl_cover01.jpg" />
     <Content Include="Content\Images\girl_cover03.jpg" />
@@ -211,6 +213,7 @@
     <Content Include="Content\Pages\Forgot Password2.png" />
     <Content Include="Content\Pages\Home Page.png" />
     <Content Include="Content\Pages\Kiosk.png" />
+    <Content Include="Content\Pages\report.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -278,6 +281,8 @@
     <Content Include="Views\Admin\Create.cshtml" />
     <Content Include="Views\Admin\Update.cshtml" />
     <Content Include="Views\Admin\Delete.cshtml" />
+    <Content Include="Views\Admin\Overwritedata.cshtml" />
+    <Content Include="Views\Admin\Registeradmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

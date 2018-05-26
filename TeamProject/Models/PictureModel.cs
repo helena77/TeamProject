@@ -53,6 +53,19 @@ namespace TeamProject.Models
         }
 
         /// <summary>
+        /// Make an Picture from values passed in with id
+        /// </summary>
+        /// <param name="uri"></param>
+        /// <param name="name"></param>
+        /// <param name="id"></param>
+        public PictureModel(string uri, string name, string id)
+        {
+            Id = id;
+            Name = name;
+            Uri = uri;
+        }
+
+        /// <summary>
         /// Used to Update Picture Before doing a data save
         /// Updates everything except for the ID
         /// </summary>

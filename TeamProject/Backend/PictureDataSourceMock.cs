@@ -8,7 +8,7 @@ using TeamProject.Models;
 namespace TeamProject.Backend
 {
     /// <summary>
-    /// Backend Mock DataSource for Avatars, to manage them
+    /// Backend Mock DataSource for Picture, to manage them
     /// </summary>
     public class PictureDataSourceMock : IPictureInterface
     {
@@ -41,18 +41,18 @@ namespace TeamProject.Backend
         }
 
         /// <summary>
-        /// The Avatar List
+        /// The Picture List
         /// </summary>
-        private List<PictureModel> avatarList = new List<PictureModel>();
+        private List<PictureModel> PictureList = new List<PictureModel>();
 
         /// <summary>
-        /// Makes a new Avatar
+        /// Makes a new Picture
         /// </summary>
         /// <param name="data"></param>
         /// <returns>Avatar Passed In</returns>
         public PictureModel Create(PictureModel data)
         {
-            avatarList.Add(data);
+            PictureList.Add(data);
             return data;
         }
 
@@ -68,7 +68,7 @@ namespace TeamProject.Backend
                 return null;
             }
 
-            var myReturn = avatarList.Find(n => n.Id == id);
+            var myReturn = PictureList.Find(n => n.Id == id);
             return myReturn;
         }
 
@@ -83,7 +83,7 @@ namespace TeamProject.Backend
             {
                 return null;
             }
-            var myReturn = avatarList.Find(n => n.Id == data.Id);
+            var myReturn = PictureList.Find(n => n.Id == data.Id);
 
             myReturn.Update(data);
 
@@ -102,8 +102,8 @@ namespace TeamProject.Backend
                 return false;
             }
 
-            var myData = avatarList.Find(n => n.Id == Id);
-            var myReturn = avatarList.Remove(myData);
+            var myData = PictureList.Find(n => n.Id == Id);
+            var myReturn = PictureList.Remove(myData);
             return myReturn;
         }
 
@@ -113,7 +113,7 @@ namespace TeamProject.Backend
         /// <returns>List of Avatars</returns>
         public List<PictureModel> Index()
         {
-            return avatarList;
+            return PictureList;
         }
 
         /// <summary>
@@ -121,7 +121,7 @@ namespace TeamProject.Backend
         /// </summary>
         public void Reset()
         {
-            avatarList.Clear();
+            PictureList.Clear();
             Initialize();
         }
 
@@ -131,8 +131,10 @@ namespace TeamProject.Backend
         public void Initialize()
         {
             Create(new PictureModel("default.png", "Default"));
-            Create(new PictureModel("defaultboy.png", "Boy Default"));
-            Create(new PictureModel("defaultgirl.png", "Girl Default"));
+            Create(new PictureModel("defaultboy.png", "Boy Default1", "1"));
+            Create(new PictureModel("defaultgirl.png", "Girl Default1", "2"));
+            Create(new PictureModel("defaultgirl1.png", "Girl Default2"));
+            Create(new PictureModel("defaultboy1.png", "Boy Default2"));
         }
     }
 }
