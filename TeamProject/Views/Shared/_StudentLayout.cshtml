@@ -8,49 +8,53 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-fixed-top">
-        <div class="container">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
             <div class="navbar-collapse collapse">
-                <div id='cssmenu'>
-                    <ul>
-                        <li class='active'>@Html.ActionLink("Student", "Dashboard", "Student")</li>
-                        <li>@Html.ActionLink("Profile", "Profile", "Student")</li>
-                        <li>@Html.ActionLink("WorldTour", "Game", "Student")</li>
-                        <li>@Html.ActionLink("Record", "Record", "Student")</li>
-                        <li>@Html.ActionLink("Calendar", "Calendar", "Student")</li>
-                        <li class='one'>@Html.ActionLink("Log Out", "Index", "Home")</li>
-                    </ul>
-                </div>
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Student", "Dashboard", "Student")</li>
+                    <li>@Html.ActionLink("Profile", "Profile", "Student")</li>
+                    <li>@Html.ActionLink("WorldTour", "Game", "Student")</li>
+                    <li>@Html.ActionLink("Record", "Record", "Student")</li>
+                    <li>@Html.ActionLink("Calendar", "Calendar", "Student")</li>
+                    <li class='one'>@Html.ActionLink("Log Out", "Index", "Home")</li>
+                </ul>
             </div>
         </div>
-        </div>
-        <div class="container body-content">
-            @RenderBody()
-        </div>
-        <div class="container body-content">
-            <hr />
-            <center>
-                <footer>
-                    <div class="footer navbar-fixed-bottom">
-                        <div style="background-color:transparent">
-                            &nbsp;&nbsp;Copyrights &copy; @DateTime.Now.Year U-High Team All rights reserved
-                            &nbsp;&nbsp;
-                            @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })
-                            @Html.ActionLink("Privacy Policy", "Privacy", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })
-                            @Html.ActionLink("Contact", "Contact", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })
-                        </div>
-
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <div class="container body-content">
+        <hr />
+        <center>
+            <footer>
+                <div class="footer navbar-fixed-bottom">
+                    <div style="background-color:transparent">
+                        &nbsp;&nbsp;Copyrights &copy; @DateTime.Now.Year U-High Team All rights reserved
+                        &nbsp;&nbsp;
+                        @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })
+                        @Html.ActionLink("Privacy Policy", "Privacy", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })
+                        @Html.ActionLink("Contact", "Contact", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })
                     </div>
-                </footer>
-            </center>
-        </div>
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
+                </div>
+            </footer>
+        </center>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
 </body>
 </html>
 
-<style>
+@*<style>
     /*body*/
     
     body {
@@ -174,7 +178,7 @@
         }
 
 
-</style>
+</style>*@
 
 
 
