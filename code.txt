@@ -1,1 +1,0 @@
-<img src="~/Content/img/calendar.png" align="middle" width="1000" height="500">
