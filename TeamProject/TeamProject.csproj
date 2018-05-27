@@ -214,6 +214,7 @@
     <Content Include="Content\Pages\admin.jpg" />
     <Content Include="Content\Pages\Forgot Password1.png" />
     <Content Include="Content\Pages\Forgot Password2.png" />
+    <Content Include="Content\Pages\ForgotPWImage.png" />
     <Content Include="Content\Pages\home logo.png" />
     <Content Include="Content\Pages\Home Page.png" />
     <Content Include="Content\Pages\kiosk.jpg" />
@@ -221,6 +222,7 @@
     <Content Include="Content\Pages\logo.png" />
     <Content Include="Content\Pages\report.png" />
     <Content Include="Content\Pages\student.png" />
+    <Content Include="Content\Pages\UpdatePWImage.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
