@@ -35,7 +35,7 @@ namespace TeamProject.Controllers
             return View(StudentViewModel);
         }
 
-        // GET: Kiosk/SetLogout/5
+        // GET: Kiosk/SetLogout/
         public ActionResult SetLogin(string id)
         {
             if (string.IsNullOrEmpty(id))
@@ -47,7 +47,7 @@ namespace TeamProject.Controllers
             return RedirectToAction("Attendance");
         }
 
-        // GET: Kiosk/SetLogout/5
+        // GET: Kiosk/SetLogout/
         public ActionResult SetLogout(string id)
         {
             if (string.IsNullOrEmpty(id))
