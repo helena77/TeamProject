@@ -236,7 +236,12 @@ namespace TeamProject.Controllers
             return RedirectToAction("Students");
         }
 
-    public ActionResult Report()
+        public ActionResult Archive()
+        {
+            return View();
+        }
+
+        public ActionResult Report()
         {
             return View();
         }
