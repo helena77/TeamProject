@@ -178,6 +178,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\AboutBackground.jpg" />
     <Content Include="Content\Images\admin setting.png" />
     <Content Include="Content\Images\attendance record dashboard copy.png" />
     <Content Include="Content\Images\defaultboy1.png" />
@@ -214,6 +215,7 @@
     <Content Include="Content\Pages\Forgot Password2.png" />
     <Content Include="Content\Pages\Home Page.png" />
     <Content Include="Content\Pages\Kiosk.png" />
+    <Content Include="Content\Pages\logo.png" />
     <Content Include="Content\Pages\report.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -255,7 +257,6 @@
     <Content Include="Views\Admin\Profile.cshtml" />
     <Content Include="Views\Admin\Setting.cshtml" />
     <Content Include="Views\Admin\Students.cshtml" />
-    <Content Include="Views\Home\Help.cshtml" />
     <Content Include="Views\Home\Privacy.cshtml" />
     <Content Include="Views\Kiosk\Index.cshtml" />
     <Content Include="Views\Kiosk\Attendance.cshtml" />
@@ -284,6 +285,7 @@
     <Content Include="Views\Admin\Delete.cshtml" />
     <Content Include="Views\Admin\Overwritedata.cshtml" />
     <Content Include="Views\Admin\Registeradmin.cshtml" />
+    <Content Include="Views\Shared\_MikeLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

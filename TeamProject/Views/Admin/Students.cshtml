@@ -16,22 +16,22 @@
                 <br />
                 <p>No Students in the System</p>
                 <br />
-        }
-        else
-        {
-            foreach (var item in Model.StudentList)
+            }
+            else
             {
-                <div class="col-sm-3">
-                    <a id="@item.Id" href="~/Admin/Read/@item.Id">
-                        <img src="~/Content/Images/@item.PictureUri" width="150" height="150" />
-                        <br />
-                        <span>
-                            @item.Name
-                        </span>
-                    </a>
-                </div>
-        }
-    }
+                foreach (var item in Model.StudentList)
+                {
+                    <div class="col-sm-3">
+                        <a id="@item.Id" href="~/Admin/Read/@item.Id">
+                            <img src="~/Content/Images/@item.PictureUri" width="150" height="150" />
+                            <br />
+                            <span>
+                                @item.Name
+                            </span>
+                        </a>
+                    </div>
+                }
+            }
             }
         </div>
         <br />

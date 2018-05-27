@@ -1,14 +1,40 @@
 ﻿@{
+    Layout = "~/Views/Shared/_MikeLayout.cshtml";
     ViewBag.Title = "About";
 }
-<style type="text/css">
+
+<style>
     body {
-        padding: 30px;
-        margin: 30px;
+        /* Location of the image */
+        background-image: url("../../Content/Images/AboutBackground.jpg");
+        /* Background image is centered vertically and horizontally at all times */
+        background-position: center center;
+        /* Background image doesn't tile */
+        background-repeat: no-repeat;
+        /* Background image is fixed in the viewport so that it doesn't move when 
+        the content's height is greater than the image's height */
+        background-attachment: fixed;
+        /* This is what makes the background image rescale based
+        on the container's size */
+        background-size: cover;
+        /* Set a background color that will be displayed
+        while the background image is loading */
+        background-color: #464646;
+        background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url("../../Content/Images/AboutBackground.jpg");
     }
 </style>
-
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
-
-<p>Use this area to provide additional information.</p>
+<h1 style="font-family:Calibri">&emsp;About</h1>
+<center>
+    <br />
+    <h2 style="font-size:xx-large;font-family:Calibri;position:center;font-weight:bold">"To awaken the dreamers, for the dreamers, by the dreamers"</h2>
+    <br />
+    <p style="font-size:large;font-family:Calibri;position:center;font-weight:bold">
+        The brand new time-based attendance system will lesson your workload.
+        <br /><br />
+        You don't have to call attendance anymore.
+        <br /><br />
+        Student will simply click a button to check in and check out.
+        <br /><br />
+        The user-friendly interface and game content will promote students to come to school on time and stay longer.
+    <p/>
+</center>
