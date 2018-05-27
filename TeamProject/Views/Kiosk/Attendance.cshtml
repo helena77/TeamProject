@@ -1,4 +1,5 @@
-﻿@{
+﻿@model TeamProject.Models.StudentViewModel
+@{
     ViewBag.Title = "Attendance";
 }
 
@@ -138,99 +139,146 @@
         });
     </script>
 
-    <!-- photo html-->
-    <div class="row">
-        <div class="col-sm-4">
-            <img src="~/Content/Images/girl_cover01.jpg" id="kira" onclick="transition()" alt="Lights" style="width:100%" />
-            <h2 id="kira" onclick="transition()">Kira</h2>
-        </div>
-
-        <div class="col-sm-4">
-            <img src="~/Content/Images/man_cover01.jpg" id="Tom" onclick="transition2()" alt="Lights" style="width:100%" />
-            <h2 id="Tom" onclick="transition2()">Tom</h2>
-        </div>
-
-        <div class="col-sm-4">
-            <img src="~/Content/Images/girl_cover03.jpg" id="Mary" onclick="transition3()" style="width:100%" />
-            <h2 id="Mary" onclick="transition3()">Mary</h2>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-sm-12">
+                @{
+                    if (Model.StudentList == null || !Model.StudentList.Any())
+                    {
+                        <br />
+                        <p>No Students in the System</p>
+                        <br />
+                    }
+                    else
+                    {
+                        foreach (var item in Model.StudentList)
+                        {
+                            if (item.Status == TeamProject.Models.StudentStatusEnum.In)
+                            {
+                                <div class="col-sm-3">
+                                    <a id="@item.Id" href="~/Kiosk/SetLogOut/@item.Id">
+                                        <img src="~/Content/Images/@item.PictureUri" width="150" height="150" />
+                                        <br />
+                                        <span>
+                                            @item.Name
+                                        </span>
+                                    </a>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="col-sm-3">
+                                    <a id="@item.Id" href="~/Kiosk/SetLogOut/@item.Id">
+                                        <img src="~/Content/Images/@item.PictureUri" width="150" height="150" style="opacity:0.6" />
+                                        <br />
+                                        <span>
+                                            @item.Name
+                                        </span>
+                                    </a>
+                                </div>
+                            }
+                        }
+                    }
+                }
+            </div>
+            <br />
+            <br />
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-sm-4">
-            <img src="~/Content/Images/girl_cover04.jpg" id="Kate" onclick="transition4()" style="width:100%" />
-            <h2 id="Kate" onclick="transition4()">Kate</h2>
+    @*<!-- photo html-->
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="~/Content/Images/girl_cover01.jpg" id="kira" onclick="transition()" alt="Lights" style="width:100%" />
+                <h2 id="kira" onclick="transition()">Kira</h2>
+            </div>
+
+            <div class="col-sm-4">
+                <img src="~/Content/Images/man_cover01.jpg" id="Tom" onclick="transition2()" alt="Lights" style="width:100%" />
+                <h2 id="Tom" onclick="transition2()">Tom</h2>
+            </div>
+
+            <div class="col-sm-4">
+                <img src="~/Content/Images/girl_cover03.jpg" id="Mary" onclick="transition3()" style="width:100%" />
+                <h2 id="Mary" onclick="transition3()">Mary</h2>
+            </div>
         </div>
 
-        <div class="col-sm-4">
-            <img src="~/Content/Images/man_cover02.jpg" id="Joe" onclick="transition5()" style="width:100%" />
-            <h2 id="Joe" onclick="transition5()">Joe</h2>
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="~/Content/Images/girl_cover04.jpg" id="Kate" onclick="transition4()" style="width:100%" />
+                <h2 id="Kate" onclick="transition4()">Kate</h2>
+            </div>
+
+            <div class="col-sm-4">
+                <img src="~/Content/Images/man_cover02.jpg" id="Joe" onclick="transition5()" style="width:100%" />
+                <h2 id="Joe" onclick="transition5()">Joe</h2>
+            </div>
+
+            <div class="col-sm-4">
+                <img src="~/Content/Images/girl_cover05.jpg" id="Jane" onclick="transition6()" style="width:100%" />
+                <h2 id="Jane" onclick="transition6()">Jane</h2>
+            </div>
         </div>
 
-        <div class="col-sm-4">
-            <img src="~/Content/Images/girl_cover05.jpg" id="Jane" onclick="transition6()" style="width:100%" />
-            <h2 id="Jane" onclick="transition6()">Jane</h2>
-        </div>
-    </div>
+        <!-- photo html-->
+        <script type="text/javascript">
 
-    <!-- photo html-->
-    <script type="text/javascript">
-
-        function transition() {
-            var kira = document.getElementById("kira");
-            if (kira.src.match("http://mchattendance.azurewebsites.net/Content/Images/girl_cover01.jpg")) {
-                kira.src = "http://mchattendance.azurewebsites.net/Content/Images/girl.jpg";
-            } else {
-                kira.src = "http://mchattendance.azurewebsites.net/Content/Images/girl_cover01.jpg"
+            function transition() {
+                var kira = document.getElementById("kira");
+                if (kira.src.match("http://mchattendance.azurewebsites.net/Content/Images/girl_cover01.jpg")) {
+                    kira.src = "http://mchattendance.azurewebsites.net/Content/Images/girl.jpg";
+                } else {
+                    kira.src = "http://mchattendance.azurewebsites.net/Content/Images/girl_cover01.jpg"
+                }
             }
-        }
 
-        function transition2() {
-            var tom = document.getElementById("Tom");
-            if (tom.src.match("http://mchattendance.azurewebsites.net/Content/Images/man_cover01.jpg")) {
-                tom.src = "http://mchattendance.azurewebsites.net/Content/Images/man01.jpg";
-            } else {
-                tom.src = "http://mchattendance.azurewebsites.net/Content/Images/man_cover01.jpg"
+            function transition2() {
+                var tom = document.getElementById("Tom");
+                if (tom.src.match("http://mchattendance.azurewebsites.net/Content/Images/man_cover01.jpg")) {
+                    tom.src = "http://mchattendance.azurewebsites.net/Content/Images/man01.jpg";
+                } else {
+                    tom.src = "http://mchattendance.azurewebsites.net/Content/Images/man_cover01.jpg"
+                }
             }
-        }
 
-        function transition3() {
-            var mary = document.getElementById("Mary");
-            if (mary.src.match("http://mchattendance.azurewebsites.net/Content/Images/girl_cover03.jpg")) {
-                mary.src = "http://mchattendance.azurewebsites.net/Content/Images/girl3.jpg";
-            } else {
-                mary.src = "http://mchattendance.azurewebsites.net/Content/Images/girl_cover03.jpg"
+            function transition3() {
+                var mary = document.getElementById("Mary");
+                if (mary.src.match("http://mchattendance.azurewebsites.net/Content/Images/girl_cover03.jpg")) {
+                    mary.src = "http://mchattendance.azurewebsites.net/Content/Images/girl3.jpg";
+                } else {
+                    mary.src = "http://mchattendance.azurewebsites.net/Content/Images/girl_cover03.jpg"
+                }
             }
-        }
 
-        function transition4() {
-            var kate = document.getElementById("Kate");
-            if (kate.src.match("http://mchattendance.azurewebsites.net/Content/Images/girl_cover04.jpg")) {
-                kate.src = "http://mchattendance.azurewebsites.net/Content/Images/girl04.jpg";
-            } else {
-                kate.src = "http://mchattendance.azurewebsites.net/Content/Images/girl_cover04.jpg"
+            function transition4() {
+                var kate = document.getElementById("Kate");
+                if (kate.src.match("http://mchattendance.azurewebsites.net/Content/Images/girl_cover04.jpg")) {
+                    kate.src = "http://mchattendance.azurewebsites.net/Content/Images/girl04.jpg";
+                } else {
+                    kate.src = "http://mchattendance.azurewebsites.net/Content/Images/girl_cover04.jpg"
+                }
             }
-        }
 
-        function transition5() {
-            var joe = document.getElementById("Joe");
-            if (joe.src.match("http://mchattendance.azurewebsites.net/Content/Images/man_cover02.jpg")) {
-                joe.src = "http://mchattendance.azurewebsites.net/Content/Images/man02.jpg";
-            } else {
-                joe.src = "http://mchattendance.azurewebsites.net/Content/Images/man_cover02.jpg"
+            function transition5() {
+                var joe = document.getElementById("Joe");
+                if (joe.src.match("http://mchattendance.azurewebsites.net/Content/Images/man_cover02.jpg")) {
+                    joe.src = "http://mchattendance.azurewebsites.net/Content/Images/man02.jpg";
+                } else {
+                    joe.src = "http://mchattendance.azurewebsites.net/Content/Images/man_cover02.jpg"
+                }
             }
-        }
 
-        function transition6() {
-            var jane = document.getElementById("Jane");
-            if (jane.src.match("http://mchattendance.azurewebsites.net/Content/Images/girl_cover05.jpg")) {
-                jane.src = "http://mchattendance.azurewebsites.net/Content/Images/girl05.jpg";
-            } else {
-                jane.src = "http://mchattendance.azurewebsites.net/Content/Images/girl_cover05.jpg"
+            function transition6() {
+                var jane = document.getElementById("Jane");
+                if (jane.src.match("http://mchattendance.azurewebsites.net/Content/Images/girl_cover05.jpg")) {
+                    jane.src = "http://mchattendance.azurewebsites.net/Content/Images/girl05.jpg";
+                } else {
+                    jane.src = "http://mchattendance.azurewebsites.net/Content/Images/girl_cover05.jpg"
+                }
             }
-        }
 
-    </script>
+        </script>*@
 
 </div>
 
