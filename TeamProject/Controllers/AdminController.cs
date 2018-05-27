@@ -236,32 +236,43 @@ namespace TeamProject.Controllers
             return RedirectToAction("Students");
         }
 
+        //print admin archive page
         public ActionResult Archive()
         {
             return View();
         }
 
+        //print admin report page
         public ActionResult Report()
         {
             return View();
         }
 
+        //print register admin page
         public ActionResult Registeradmin()
         {
             return View();
         }
 
+        //print admin overwritedata page
         public ActionResult Overwritedata()
         {
             return View();
         }
 
+        //print admin overwritedatabyname page
         public ActionResult Overwritedatabyname()
         {
             return View();
         }
 
+        //print admin overwritedatabydate page
+        public ActionResult Overwritedatabydate()
+        {
+            return View();
+        }
 
+        //print admin calendar
         public ActionResult Calendar()
         {
             return View();
