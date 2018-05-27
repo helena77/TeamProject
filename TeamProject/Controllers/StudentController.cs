@@ -17,13 +17,13 @@ namespace TeamProject.Controllers
         // The Backend Data source
         private StudentBackend StudentBackend = StudentBackend.Instance;
 
-        // GET: Student Index
+        // GET: Student Dashboard
         public ActionResult Dashboard()
         {
             return View();
         }
 
-
+        // GET: Student Profile
         public ActionResult Profile()
         {
             return View();
