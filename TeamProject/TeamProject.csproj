@@ -218,9 +218,11 @@
     <Content Include="Content\Pages\Forgot Password2.png" />
     <Content Include="Content\Pages\home logo.png" />
     <Content Include="Content\Pages\Home Page.png" />
+    <Content Include="Content\Pages\kiosk.jpg" />
     <Content Include="Content\Pages\Kiosk.png" />
     <Content Include="Content\Pages\logo.png" />
     <Content Include="Content\Pages\report.png" />
+    <Content Include="Content\Pages\student.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -292,6 +294,8 @@
     <Content Include="Views\Shared\_MikeLayout.cshtml" />
     <Content Include="Views\Admin\Archive.cshtml" />
     <Content Include="Views\Home\AdminLogin.cshtml" />
+    <Content Include="Views\Home\StudentLogin.cshtml" />
+    <Content Include="Views\Home\KioskLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

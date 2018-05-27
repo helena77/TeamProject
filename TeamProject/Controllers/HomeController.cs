@@ -44,5 +44,15 @@ namespace TeamProject.Controllers
         {
             return View();
         }
+
+        public ActionResult StudentLogin()
+        {
+            return View();
+        }
+
+        public ActionResult KioskLogin()
+        {
+            return View();
+        }
     }
 }
