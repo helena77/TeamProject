@@ -201,6 +201,7 @@
     <Content Include="Content\Images\man02.jpg" />
     <Content Include="Content\Images\man_cover01.jpg" />
     <Content Include="Content\Images\man_cover02.jpg" />
+    <Content Include="Content\Images\overwrite data.png" />
     <Content Include="Content\Images\record.png" />
     <Content Include="Content\Images\Report.png" />
     <Content Include="Content\Images\student profile.PNG" />
