@@ -211,8 +211,10 @@
     <Content Include="Content\Images\WorldTour\PrizeTomb.png" />
     <Content Include="Content\Images\WorldTour\Seattle.png" />
     <Content Include="Content\Pages\Admin Registration.png" />
+    <Content Include="Content\Pages\admin.jpg" />
     <Content Include="Content\Pages\Forgot Password1.png" />
     <Content Include="Content\Pages\Forgot Password2.png" />
+    <Content Include="Content\Pages\home logo.png" />
     <Content Include="Content\Pages\Home Page.png" />
     <Content Include="Content\Pages\Kiosk.png" />
     <Content Include="Content\Pages\logo.png" />
@@ -287,6 +289,7 @@
     <Content Include="Views\Admin\Registeradmin.cshtml" />
     <Content Include="Views\Shared\_MikeLayout.cshtml" />
     <Content Include="Views\Admin\Archive.cshtml" />
+    <Content Include="Views\Home\AdminLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
