@@ -179,6 +179,8 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\AboutBackground.jpg" />
+    <Content Include="Content\Images\admin profile.png" />
+    <Content Include="Content\Images\admin reset password.png" />
     <Content Include="Content\Images\admin setting.png" />
     <Content Include="Content\Images\attendance record dashboard copy.png" />
     <Content Include="Content\Images\defaultboy1.png" />
@@ -200,6 +202,7 @@
     <Content Include="Content\Images\man02.jpg" />
     <Content Include="Content\Images\man_cover01.jpg" />
     <Content Include="Content\Images\man_cover02.jpg" />
+    <Content Include="Content\Images\overwrite data.png" />
     <Content Include="Content\Images\record.png" />
     <Content Include="Content\Images\Report.png" />
     <Content Include="Content\Images\student profile.PNG" />
@@ -212,12 +215,16 @@
     <Content Include="Content\Images\WorldTour\PrizeTomb.png" />
     <Content Include="Content\Images\WorldTour\Seattle.png" />
     <Content Include="Content\Pages\Admin Registration.png" />
+    <Content Include="Content\Pages\admin.jpg" />
     <Content Include="Content\Pages\Forgot Password1.png" />
     <Content Include="Content\Pages\Forgot Password2.png" />
+    <Content Include="Content\Pages\home logo.png" />
     <Content Include="Content\Pages\Home Page.png" />
+    <Content Include="Content\Pages\kiosk.jpg" />
     <Content Include="Content\Pages\Kiosk.png" />
     <Content Include="Content\Pages\logo.png" />
     <Content Include="Content\Pages\report.png" />
+    <Content Include="Content\Pages\student.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -287,6 +294,10 @@
     <Content Include="Views\Admin\Overwritedata.cshtml" />
     <Content Include="Views\Admin\Registeradmin.cshtml" />
     <Content Include="Views\Shared\_MikeLayout.cshtml" />
+    <Content Include="Views\Admin\Archive.cshtml" />
+    <Content Include="Views\Home\AdminLogin.cshtml" />
+    <Content Include="Views\Home\StudentLogin.cshtml" />
+    <Content Include="Views\Home\KioskLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

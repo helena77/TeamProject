@@ -15,8 +15,6 @@ namespace TeamProject.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
@@ -29,8 +27,6 @@ namespace TeamProject.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
 
@@ -40,6 +36,21 @@ namespace TeamProject.Controllers
         }
 
         public ActionResult UpdatePassword()
+        {
+            return View();
+        }
+
+        public ActionResult AdminLogin()
+        {
+            return View();
+        }
+
+        public ActionResult StudentLogin()
+        {
+            return View();
+        }
+
+        public ActionResult KioskLogin()
         {
             return View();
         }

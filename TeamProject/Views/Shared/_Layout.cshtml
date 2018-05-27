@@ -12,21 +12,21 @@
         @RenderBody()
     </div>
     <div class="container body-content">
-        <footer>
-            <div class="footer navbar-fixed-bottom">
-                <div style="background-color:white">
-                    <div class="col-md-3"></div>
-                    <div style="color:gainsboro">
-                        Copyrights &nbsp;&nbsp;&copy; @DateTime.Now.Year U-High Team All rights reserved
+        <hr />
+        <center>
+            <footer>
+                <div class="footer navbar-fixed-bottom">
+                    <div style="background-color:transparent">
+                        &nbsp;&nbsp;Copyrights &copy; @DateTime.Now.Year U-High Team All rights reserved
                         &nbsp;&nbsp;
                         @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })
-                        @Html.ActionLink("Privacy", "Privacy", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })
+                        @Html.ActionLink("Privacy Policy", "Privacy", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })
                         @Html.ActionLink("Contact", "Contact", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })
-                        @Html.ActionLink("Help", "Help", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })
                     </div>
+
                 </div>
-            </div>
-        </footer>
+            </footer>
+        </center>
     </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
