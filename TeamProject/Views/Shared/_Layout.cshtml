@@ -8,21 +8,6 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-collapse collapse">
-                <div id='cssmenu'>
-                    <ul>
-                        <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
-                        <li>@Html.ActionLink("Kiosk", "Index", "Kiosk", new { area = "" }, new { @class = "navbar-brand" })</li>
-                        <li>@Html.ActionLink("Attendance", "Attendance", "Kiosk", new { area = "" }, new { @class = "navbar-brand" })</li>
-                        <li>@Html.ActionLink("Admin", "Dashboard", "Admin", new { area = "" }, new { @class = "navbar-brand" })</li>
-                        <li>@Html.ActionLink("Student", "Dashboard", "Student", new { area = "" }, new { @class = "navbar-brand" })</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="container body-content">
         @RenderBody()
     </div>
