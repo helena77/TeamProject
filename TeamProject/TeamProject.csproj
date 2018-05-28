@@ -190,6 +190,7 @@
     <Content Include="Content\Images\defaultboy.png" />
     <Content Include="Content\Images\calendar.PNG" />
     <Content Include="Content\Images\Kimmie_portrait.jpg" />
+    <Content Include="Content\Images\record copy.png" />
     <Content Include="Content\Images\Student Dashboard\attendance record dashboard.png" />
     <Content Include="Content\Images\girl.jpg" />
     <Content Include="Content\Images\defaultgirl.png" />
@@ -200,7 +201,6 @@
     <Content Include="Content\Images\boy1.jpg" />
     <Content Include="Content\Images\boy2.jpg" />
     <Content Include="Content\Images\overwrite data.png" />
-    <Content Include="Content\Images\record.png" />
     <Content Include="Content\Images\Report.png" />
     <Content Include="Content\Images\Student Dashboard\game dashboard copy-1.png" />
     <Content Include="Content\Images\Student Dashboard\welcome board 1100-1 copy.png" />

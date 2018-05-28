@@ -5,19 +5,61 @@
 }
 
 
-<style type="text/css">
-    body {
-        padding: 30px;
-        margin: 30px;
+<!-- Include Required Prerequisites -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+<style class="cp-pen-styles"></style>
+
+
+<div class="container" style="float:left; margin-top:3%;">
+    <div class="row searchFilter">
+        <div class="col-sm-10">
+            <div class="input-group">
+                @*<input id="table_filter" type="text" class="form-control" aria-label="Text input with segmented button dropdown">*@               
+                
+                <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 130%; margin-top:5px;">
+                    <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+                    <span></span> <b class="caret"></b>
+                </div>
+                <br />
+                <button id="searchBtn" type="button" class="btn btn-secondary btn-search" style="background-color: #f8632f;"><span class="glyphicon glyphicon-search">&nbsp;</span> <span class="label-icon">Enter</span></button>
+                <br />
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<p>
+
+    <img src="~/Content/Images/record copy.png" style="width:100%; height:100%; align-content:center">
+
+</p>
+
+<script src='//static.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js'></script>
+<script>
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
     }
-</style>
+    cb(moment().subtract(29, 'days'), moment());
 
-<h2>Record</h2>
+    $('#reportrange').daterangepicker({
+        ranges: {
+            'Today': [moment(), moment()],
+            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
 
-<section>
+</script>
 
-        <img src="~/Content/Images/record.png" align="middle" width="1000" height="550">
-
-
-</section>
 
