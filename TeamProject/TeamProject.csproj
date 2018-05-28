@@ -204,6 +204,8 @@
     <Content Include="Content\Images\Report.png" />
     <Content Include="Content\Images\Student Dashboard\game dashboard copy-1.png" />
     <Content Include="Content\Images\Student Dashboard\welcome board 1100-1 copy.png" />
+    <Content Include="Content\Images\student profile background.png" />
+    <Content Include="Content\Images\student profile.jpg" />
     <Content Include="Content\Images\WorldTour\Building.png" />
     <Content Include="Content\Images\WorldTour\CoinBank.png" />
     <Content Include="Content\Images\dashboard pic2.png" />
