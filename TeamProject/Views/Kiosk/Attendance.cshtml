@@ -161,24 +161,24 @@
                         {
                             if (item.Status == TeamProject.Models.StudentStatusEnum.In)
                             {
-                                <div class="col-sm-3">
+                                <div class="col-sm-4">
                                     <a id="@item.Id" href="~/Kiosk/SetLogOut/@item.Id">
-                                        <img src="~/Content/Images/@item.PictureUri" width="150" height="150" />
+                                        <img src="~/Content/Images/@item.PictureUri" width="300" height="300" />
                                         <br />
                                         <span>
-                                            @item.Name
+                                            <label style="font-family:Calibri;font-size:x-large;">@item.Name</label>
                                         </span>
                                     </a>
                                 </div>
                             }
                             else
                             {
-                                <div class="col-sm-3">
+                                <div class="col-sm-4">
                                     <a id="@item.Id" href="~/Kiosk/SetLogOut/@item.Id">
-                                        <img src="~/Content/Images/@item.PictureUri" width="150" height="150" style="opacity:0.6" />
+                                        <img src="~/Content/Images/@item.PictureUri" width="300" height="300" style="opacity:0.2;" />
                                         <br />
                                         <span>
-                                            @item.Name
+                                            <label style="font-family:Calibri;font-size:x-large;">@item.Name</label>
                                         </span>
                                     </a>
                                 </div>

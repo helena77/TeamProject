@@ -132,13 +132,13 @@ namespace TeamProject.Backend
         {
             Create(new StudentModel("Joe", "Seo", "seow@seattleu.edu", "1"));
             Create(new StudentModel("Jenny", "Moon", "moonj@seattleu.edu", "2"));
-            Create(new StudentModel("Erica", "Chen", "chene@seattleu.edu", null));
-            Create(new StudentModel("Helena", "Wang","wangh@seattleu.edu", null));
-            Create(new StudentModel("Daniel", "Deng", "dengd@seattleu.edu", null));
-            Create(new StudentModel("Victor", "Chimenti", "chimentiv@seattleu.edu", null));
-            Create(new StudentModel("Kyle", "Tible", "tiblek@seattleu.edu", null));
-            Create(new StudentModel("Raelee","Reiger", "reigerr@seattleu.edu", null));
-            Create(new StudentModel("Cristina", "Chen", "chenc@seattleu.edu", null));
+            Create(new StudentModel("Erica", "Chen", "chene@seattleu.edu", "3"));
+            Create(new StudentModel("Helena", "Wang","wangh@seattleu.edu", "4"));
+            Create(new StudentModel("Daniel", "Deng", "dengd@seattleu.edu", "5"));
+            Create(new StudentModel("Victor", "Chimenti", "chimentiv@seattleu.edu", "6"));
+            Create(new StudentModel("Kyle", "Tible", "tiblek@seattleu.edu", "7"));
+            Create(new StudentModel("Raelee","Reiger", "reigerr@seattleu.edu", "8"));
+            Create(new StudentModel("Cristina", "Chen", "chenc@seattleu.edu", "9"));
             Create(new StudentModel("Jack", "Joesph", "josephj@seattleu.edu", null));
         }
     }
