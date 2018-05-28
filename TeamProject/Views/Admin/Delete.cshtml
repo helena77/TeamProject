@@ -5,35 +5,23 @@
 
 <div class="container">
     <div class="row">
-
         @{
             if (Model == null)
             {
                 <p>No Student</p>
             }
-
             else
             {
                 <div class="row">
-                    <h2>Delete Student</h2>
-                    <br />
-                    <br />
-
-                    <div class="row">
-                        <div class="col-sm-3 text-right">
-                        </div>
-                        <div class="col-sm-2">
-                            <img src="~/Content/Images/@Model.PictureUri" width="75" height="75" />
-                            <br />
-                            <span>
-                                @Model.Name
-                                <br />
-                                <br />
-                                <br />
+                    <h2>Delete Student</h2><br /><br />
+                    <center>
+                        <div class="row">
+                            <img src="~/Content/Images/@Model.PictureUri" width="300" height="300" /><br />
+                            <span style="font-size:xx-large">
+                                @Model.Name<br /><br /><br />     
                             </span>
                         </div>
-                    </div>
-
+                    </center>
                     @using (Html.BeginForm())
                     {
                         @Html.AntiForgeryToken()
@@ -42,20 +30,15 @@
                         @Html.HiddenFor(m => m.LastName)
                         @Html.HiddenFor(m => m.Email)
                         @Html.HiddenFor(m => m.PictureId)
-
-                        <div class="row">
-                            <div class="col-sm-3 text-right">
+                        <center>
+                            <div class="row">
+                                @Html.ActionLink("Cancel", "Students", new { id = Model.Id }, new { @class = "btn btn-success btn-lg" })
+                                <input type="submit" value="Delete" class="btn btn-danger btn-lg">
                             </div>
-                            <div class="col-sm-4">
-                                @Html.ActionLink("Cancel", "Students", new { id = Model.Id }, new { @class = "btn btn-success" })
-                                <input type="submit" value="Delete" class="btn btn-danger">
-                            </div>
-                        </div>
+                        </center>
                     }
-
                 </div>
             }
-
         }
     </div>
 </div>

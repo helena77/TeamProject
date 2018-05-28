@@ -8,19 +8,26 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-fixed-top">
-        <div class="container">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
             <div class="navbar-collapse collapse">
-                <div id='cssmenu'>
-                    <ul>
-                        <li class='active'>@Html.ActionLink("Student", "Dashboard", "Student")</li>
-                        <li>@Html.ActionLink("Profile", "Profile", "Student")</li>
-                        <li>@Html.ActionLink("WorldTour", "Game", "Student")</li>
-                        <li>@Html.ActionLink("Record", "Record", "Student")</li>
-                        <li>@Html.ActionLink("Calendar", "Calendar", "Student")</li>
-                        <li class='one'>@Html.ActionLink("Log Out", "Index", "Home")</li>
-                    </ul>
-                </div>
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Dashboard", "Dashboard", "Student")</li>
+                    <li>@Html.ActionLink("Profile", "Profile", "Student")</li>
+                    <li>@Html.ActionLink("WorldTour", "Game", "Student")</li>
+                    <li>@Html.ActionLink("Record", "Record", "Student")</li>
+                    <li>@Html.ActionLink("Calendar", "Calendar", "Student")</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" style="margin-right:30px;">
+                    <li>@Html.ActionLink("Log Out", "Index", "Home")</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -56,7 +63,7 @@
 </body>
 </html>
 
-<style>
+@*<style>
     #cssmenu,
     #cssmenu ul,
     #cssmenu ul li,
@@ -169,4 +176,4 @@
         #cssmenu > ul > li.one {
             float: right;
         }
-</style>
+</style>*@

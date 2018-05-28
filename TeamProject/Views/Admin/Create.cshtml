@@ -1,66 +1,60 @@
 ﻿@model TeamProject.Models.StudentModel
 
 @{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
     ViewBag.Title = "Create";
 }
 
 <div class="container">
     <div class="row">
-        <h2>Create Student</h2>
-        <br />
-        <br />
+        <h2>Register Student</h2><br /><br />
+        <center>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(m => m.Id)
 
-        @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-        @Html.HiddenFor(m => m.Id)
-
-        <div class="row">
-            <div class="col-sm-3 text-right">
-                @Html.DisplayNameFor(m => m.Name)
-            </div>
-            <div class="col-sm-2">
-                @Html.EditorFor(m => m.Name)
-                @Html.ValidationMessageFor(m => m.Name)
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-3 text-right">
-                @Html.DisplayNameFor(m => m.LastName)
-            </div>
-            <div class="col-sm-2">
-                @Html.EditorFor(m => m.LastName)
-                @Html.ValidationMessageFor(m => m.LastName)
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-3 text-right">
-                @Html.DisplayNameFor(m => m.Email)
-            </div>
-            <div class="col-sm-2">
-                @Html.EditorFor(m => m.Email)
-                @Html.ValidationMessageFor(m => m.Email)
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-3 text-right">
-                @Html.DisplayNameFor(m => m.PictureId)
-            </div>
-            <div class="col-sm-2">
-                @Html.DropDownListFor(m => m.PictureId, TeamProject.Backend.PictureBackend.Instance.GetPictureListItem(Model.PictureId))
-                @Html.ValidationMessageFor(m => m.PictureId)
-            </div>
-        </div>
-        <br />
-        <br />
-        <div class="row">
-            <div class="col-sm-3 text-right">
-            </div>
-            <div class="col-sm-4">
-                @Html.ActionLink("Cancel", "Students", new { id = Model.Id }, new { @class = "btn btn-success" })
-                <input type="submit" value="Create" class="btn btn-primary">
-            </div>
-        </div>
-}
+                <div class="row">
+                    <div class="col-sm-5 text-right" style="font-family:Calibri;font-size:x-large">
+                        @Html.DisplayNameFor(m => m.Name)
+                    </div>
+                    <div class="col-sm-2" style="font-family:Calibri;font-size:x-large">
+                        @Html.EditorFor(m => m.Name)
+                        @Html.ValidationMessageFor(m => m.Name)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5 text-right" style="font-family:Calibri;font-size:x-large">
+                        @Html.DisplayNameFor(m => m.LastName)
+                    </div>
+                    <div class="col-sm-2" style="font-family:Calibri;font-size:x-large">
+                        @Html.EditorFor(m => m.LastName)
+                        @Html.ValidationMessageFor(m => m.LastName)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5 text-right" style="font-family:Calibri;font-size:x-large">
+                        @Html.DisplayNameFor(m => m.Email)
+                    </div>
+                    <div class="col-sm-2" style="font-family:Calibri;font-size:x-large">
+                        @Html.EditorFor(m => m.Email)
+                        @Html.ValidationMessageFor(m => m.Email)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5 text-right" style="font-family:Calibri;font-size:x-large">
+                        @Html.DisplayNameFor(m => m.PictureId)
+                    </div>
+                    <div class="col-sm-2" style="font-family:Calibri;font-size:x-large">
+                        @Html.DropDownListFor(m => m.PictureId, TeamProject.Backend.PictureBackend.Instance.GetPictureListItem(Model.PictureId))
+                        @Html.ValidationMessageFor(m => m.PictureId)
+                    </div>
+                </div><br /><br />
+                <div class="row">
+                    @Html.ActionLink("Cancel", "Students", new { id = Model.Id }, new { @class = "btn btn-success btn-lg" })
+                    <input type="submit" value="Create" class="btn btn-primary btn-lg">
+                </div>
+            }
+        </center>
     </div>
 </div>
