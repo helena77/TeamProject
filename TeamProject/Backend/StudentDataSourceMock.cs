@@ -139,7 +139,7 @@ namespace TeamProject.Backend
             Create(new StudentModel("Kyle", "Tible", "tiblek@seattleu.edu", "7"));
             Create(new StudentModel("Raelee","Reiger", "reigerr@seattleu.edu", "8"));
             Create(new StudentModel("Cristina", "Chen", "chenc@seattleu.edu", "9"));
-            Create(new StudentModel("Jack", "Joesph", "josephj@seattleu.edu", null));
+            Create(new StudentModel("Jack", "Joesph", "josephj@seattleu.edu", "10"));
         }
     }
 }
