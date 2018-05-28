@@ -213,6 +213,7 @@
     <Content Include="Content\Images\welcome board 1100-2 copy.png" />
     <Content Include="Content\Images\WorldTour\Building.png" />
     <Content Include="Content\Images\WorldTour\CoinBank.png" />
+    <Content Include="Content\Images\dashboard pic2.png" />
     <Content Include="Content\Images\WorldTour\Instructions.png" />
     <Content Include="Content\Images\WorldTour\PrizeDex.png" />
     <Content Include="Content\Images\WorldTour\PrizeTomb.png" />
