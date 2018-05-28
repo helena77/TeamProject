@@ -8,34 +8,31 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-fixed-top">
-        <div class="container">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
             </div>
             <div class="navbar-collapse collapse">
-                <div id='cssmenu'>
-                    <ul>
-                        <li class='active'>@Html.ActionLink("Admin", "Dashboard", "Admin")</li>
-                        <li>@Html.ActionLink("Profile", "Profile", "Admin")</li>
-                        <li>@Html.ActionLink("Students", "Students", "Admin")</li>
-                        <li>@Html.ActionLink("Report", "Report", "Admin")</li>
-                        <li>@Html.ActionLink("Calendar", "Calendar", "Admin")</li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Setting <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">@Html.ActionLink("Overwrite Attendance", "Overwritedata", "Admin")</a></li>
-                                <li><a href="#">@Html.ActionLink("Register admin", "Registeradmin", "Admin")</a></li>
-                            </ul>
-                        </li>
-                                <li class='one'>@Html.ActionLink("Log Out", "Index", "Home")</li>
-                   </ul>
-               </div>
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Admin", "Dashboard", "Admin")</li>
+                    <li>@Html.ActionLink("Profile", "Profile", "Admin")</li>
+                    <li>@Html.ActionLink("Students", "Students", "Admin")</li>
+                    <li>@Html.ActionLink("Report", "Report", "Admin")</li>
+                    <li>@Html.ActionLink("Calendar", "Calendar", "Admin")</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Setting <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">@Html.ActionLink("Overwrite Attendance", "Overwritedata", "Admin")</a></li>
+                            <li><a href="#">@Html.ActionLink("Register admin", "Registeradmin", "Admin")</a></li>
+                        </ul>
+                    </li>
+                    <li class='one'>@Html.ActionLink("Log Out", "Index", "Home")</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -43,7 +40,6 @@
         @RenderBody()
     </div>
     <div class="container body-content">
-        <hr />
         <center>
             <footer>
                 <div class="footer navbar-fixed-bottom">
@@ -54,7 +50,6 @@
                         @Html.ActionLink("Privacy Policy", "Privacy", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })
                         @Html.ActionLink("Contact", "Contact", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })
                     </div>
-
                 </div>
             </footer>
         </center>
@@ -65,7 +60,7 @@
 </body>
 </html>
 
-<style>
+@*<style>
     #cssmenu,
     #cssmenu ul,
     #cssmenu ul li,
@@ -82,15 +77,15 @@
         box-sizing: border-box;
     }
 
-        #cssmenu:after,
-        #cssmenu > ul:after {
-            content: ".";
-            display: block;
-            clear: both;
-            visibility: hidden;
-            line-height: 0;
-            height: 0;
-        }
+    #cssmenu:after,
+    #cssmenu > ul:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+    }
 
     #cssmenu {
         width: auto;
@@ -99,86 +94,85 @@
         line-height: 1;
     }
 
-        #cssmenu ul {
-            background: #ffffff;
-        }
+    #cssmenu ul {
+        background: #ffffff;
+    }
 
-        #cssmenu > ul > li {
-            float: left;
-        }
+    #cssmenu > ul > li {
+        float: left;
+    }
 
-        #cssmenu.align-center > ul {
-            font-size: 0;
-            text-align: center;
-        }
+    #cssmenu.align-center > ul {
+        font-size: 0;
+        text-align: center;
+    }
 
-            #cssmenu.align-center > ul > li {
-                display: inline-block;
-                float: none;
-            }
+    #cssmenu.align-center > ul > li {
+        display: inline-block;
+        float: none;
+    }
 
-        #cssmenu.align-right > ul > li {
-            float: right;
-        }
+    #cssmenu.align-right > ul > li {
+        float: right;
+    }
 
-            #cssmenu.align-right > ul > li > a {
-                margin-right: 0;
-                margin-left: -4px;
-            }
+    #cssmenu.align-right > ul > li > a {
+        margin-right: 0;
+        margin-left: -4px;
+    }
 
-        #cssmenu > ul > li > a {
-            z-index: 2;
-            padding: 18px 25px 12px 25px;
-            font-size: 15px;
-            font-weight: 400;
-            text-decoration: none;
-            color: #34495e;
-            -webkit-transition: all .2s ease;
-            -moz-transition: all .2s ease;
-            -ms-transition: all .2s ease;
-            -o-transition: all .2s ease;
-            transition: all .2s ease;
-            margin-right: -4px;
-        }
+    #cssmenu > ul > li > a {
+        z-index: 2;
+        padding: 18px 25px 12px 25px;
+        font-size: 15px;
+        font-weight: 400;
+        text-decoration: none;
+        color: #34495e;
+        -webkit-transition: all .2s ease;
+        -moz-transition: all .2s ease;
+        -o-transition: all .2s ease;
+        transition: all .2s ease;
+        margin-right: -4px;
+    }
 
-            #cssmenu > ul > li.active > a,
-            #cssmenu > ul > li:hover > a,
-            #cssmenu > ul > li > a:hover {
-                color: #ffffff;
-            }
+    #cssmenu > ul > li.active > a,
+    #cssmenu > ul > li:hover > a,
+    #cssmenu > ul > li > a:hover {
+        color: #ffffff;
+    }
 
-            #cssmenu > ul > li > a:after {
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                z-index: -1;
-                width: 100%;
-                height: 120%;
-                border-top-left-radius: 8px;
-                border-top-right-radius: 8px;
-                content: "";
-                -webkit-transition: all .2s ease;
-                -o-transition: all .2s ease;
-                transition: all .2s ease;
-                -webkit-transform: perspective(5px) rotateX(2deg);
-                -webkit-transform-origin: bottom;
-                -moz-transform: perspective(5px) rotateX(2deg);
-                -moz-transform-origin: bottom;
-                transform: perspective(5px) rotateX(2deg);
-                transform-origin: bottom;
-            }
+    #cssmenu > ul > li > a:after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        width: 100%;
+        height: 120%;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        content: "";
+        -webkit-transition: all .2s ease;
+        -o-transition: all .2s ease;
+        transition: all .2s ease;
+        -webkit-transform: perspective(5px) rotateX(2deg);
+        -webkit-transform-origin: bottom;
+        -moz-transform: perspective(5px) rotateX(2deg);
+        -moz-transform-origin: bottom;
+        transform: perspective(5px) rotateX(2deg);
+        transform-origin: bottom;
+    }
 
-            #cssmenu > ul > li.active > a:after,
-            #cssmenu > ul > li:hover > a:after,
-            #cssmenu > ul > li > a:hover:after {
-                background: #34495e;
-            }
+    #cssmenu > ul > li.active > a:after,
+    #cssmenu > ul > li:hover > a:after,
+    #cssmenu > ul > li > a:hover:after {
+        background: #34495e;
+    }
 
-        #cssmenu > ul > li.one {
-            float: right;
-        }
-</style>
+    #cssmenu > ul > li.one {
+        float: right;
+    }
+</style>*@
 
 
 
