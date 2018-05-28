@@ -189,7 +189,11 @@
     <Content Include="Content\Images\default.png" />
     <Content Include="Content\Images\defaultboy.png" />
     <Content Include="Content\Images\calendar.PNG" />
+    <Content Include="Content\Images\girl6.jpg" />
     <Content Include="Content\Images\Kimmie_portrait.jpg" />
+    <Content Include="Content\Images\man3.jpg" />
+    <Content Include="Content\Images\man4.jpg" />
+    <Content Include="Content\Images\man5.jpg" />
     <Content Include="Content\Images\record copy.png" />
     <Content Include="Content\Images\Student Dashboard\attendance record dashboard.png" />
     <Content Include="Content\Images\girl.jpg" />
@@ -224,7 +228,6 @@
     <Content Include="Content\Pages\Kiosk.png" />
     <Content Include="Content\Pages\logo.png" />
     <Content Include="Content\Pages\report4.png" />
-    <Content Include="Content\Pages\report3.png" />
     <Content Include="Content\Pages\Student Profile.png" />
     <Content Include="Content\Pages\student.jpg" />
     <Content Include="Content\Pages\UpdatePWImage.png" />
