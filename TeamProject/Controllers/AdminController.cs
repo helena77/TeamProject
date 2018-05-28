@@ -22,6 +22,7 @@ namespace TeamProject.Controllers
             return View();
         }
 
+        // Get: profile
         public ActionResult Profile()
         {
             return View();
@@ -274,11 +275,6 @@ namespace TeamProject.Controllers
 
         //print admin calendar
         public ActionResult Calendar()
-        {
-            return View();
-        }
-
-        public ActionResult Setting()
         {
             return View();
         }
