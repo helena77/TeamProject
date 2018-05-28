@@ -3,24 +3,6 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
     ViewBag.Title = "Profile";
 }
-
-<style type="text/css">
-    body {
-        padding: 30px;
-        margin: 30px;
-    }
-</style>
-
-<body style="background-image:url('/Content/Images/admin profile background.png') linear-gradient();">
-
-    <section>
-        <div class="container1">
-            <img src="~/Content/Images/Kimmie_portrait.jpg" align="middle" width="400" height="500">
-            @Html.ActionLink("Reset Password", "UpdatePassword", "Home", new { controller = "Home" }, new { @class = "btn-1" })
-        </div>
-    </section>
-</body>
-
 <style>
     /*body*/
     body {
@@ -30,8 +12,6 @@
         padding: 30px;
         margin: 30px;
     }
-
-
 
     /*section*/
     section {
@@ -61,4 +41,12 @@
         text-align: center;
     }
 </style>
+<body style="background-image:url('/Content/Images/admin profile background.png') linear-gradient();">
+    <section>
+        <div class="container1">
+            <img src="~/Content/Images/Kimmie_portrait.jpg" align="middle" width="400" height="500">
+            @Html.ActionLink("Reset Password", "UpdatePassword", "Home", new { controller = "Home" }, new { @class = "btn-1" })
+        </div>
+    </section>
+</body>
 

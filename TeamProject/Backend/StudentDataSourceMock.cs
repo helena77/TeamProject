@@ -131,7 +131,7 @@ namespace TeamProject.Backend
         public void Initialize()
         {
             Create(new StudentModel("Joe", "Seo", "seow@seattleu.edu", "1"));
-            Create(new StudentModel("Jenny", "Moon", "moonj@seattleu.edu", "2"));
+            Create(new StudentModel("Olivia", "Moon", "moonj@seattleu.edu", "2"));
             Create(new StudentModel("Erica", "Chen", "chene@seattleu.edu", "3"));
             Create(new StudentModel("Helena", "Wang","wangh@seattleu.edu", "4"));
             Create(new StudentModel("Daniel", "Deng", "dengd@seattleu.edu", "5"));
