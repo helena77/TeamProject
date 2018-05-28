@@ -25,12 +25,12 @@
                 {
                     foreach (var item in Model.StudentList)
                     {
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                             <a id="@item.Id" href="~/Admin/Read/@item.Id">
-                                <img src="~/Content/Images/@item.PictureUri" width="150" height="150" />
+                                <img src="~/Content/Images/@item.PictureUri" width="300" height="300" />
                                 <br />
                                 <span>
-                                    @item.Name
+                                    <label style="font-family:Calibri;font-size:x-large;">@item.Name</label>
                                 </span>
                             </a>
                         </div>
