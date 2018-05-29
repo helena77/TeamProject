@@ -1,9 +1,5 @@
 ﻿@* Landing Page for the Game World Tour *@
 
-
-
-
-
 @{
     @* Using a shared layout for the Game *@
     Layout = "~/Views/Shared/_GameLayout.cshtml";
@@ -19,6 +15,16 @@
         padding: 30px;
         margin: 30px;
     }
+
+    #bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        /* Preserve aspet ratio */
+        min-width: 100%;
+        min-height: 100%;
+    }
+
 </style>
 
 
@@ -31,14 +37,4 @@
 
 
 @* World Tour Instructions image *@
-<!DOCTYPE html>
-<html>
-<body>
-    <img src="~/Content/Images/WorldTour/Instructions.png" style="max-width:100%;height:auto;" alt="World Tour" usemap="#Instructions">
-    <map name="Instructions">
-        <area shape="rect" coords="500, 290, 690, 360" href="~/Student/Play" alt="Play">
-    </map>
-</body>
-</html>
-
-
+<img src="~/Content/Images/WorldTour/Instructions.png" id="bg" alt="World Tour" usemap="#Instructions">
