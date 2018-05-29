@@ -6,39 +6,62 @@
 
 @{
     @* Using a shared layout for the Game *@
-    Layout = "~/Views/Shared/_GameLayout.cshtml";
+Layout = "~/Views/Shared/_GameLayout.cshtml";
     @* Game Instruction Page *@
-    ViewBag.Title = "Game";
+ViewBag.Title = "Game";
 }
 
 
 @* Margin and Padding Style *@
-<style type="text/css">
+@*<style type="text/css">*@
 
+ 
+
+    @*
     body {
         padding: 30px;
         margin: 30px;
     }
-</style>
+    *@
+
+@*</style>*@
 
 
-@* Display The World Tour Title *@
-<h1>World Tour</h1>
 
 
-@* Display Instructions to play the game *@
-<h2>Instructions</h2>
 
 
 @* World Tour Instructions image *@
+
 <!DOCTYPE html>
 <html>
+<head>
+    <style>
+
+        body {
+            background-image: url("~/Content/Images/WorldTour/Instructions.png");
+        }
+    
+    </style>
+</head>
+
 <body>
-    <img src="~/Content/Images/WorldTour/Instructions.png" style="max-width:100%;height:auto;" alt="World Tour" usemap="#Instructions">
-    <map name="Instructions">
-        <area shape="rect" coords="500, 290, 690, 360" href="~/Student/Play" alt="Play">
-    </map>
+
+    @* Display The World Tour Title *@
+    <h1>World Tour</h1>
+
+
+    @* Display Instructions to play the game *@
+    <h2>Instructions</h2>
+
+    @*
+        <img src="~/Content/Images/WorldTour/Instructions.png" style="max-width:100%;height:auto;" alt="World Tour" usemap="#Instructions">
+        <map name="Instructions">
+            <area shape="rect" coords="500, 290, 690, 360" href="~/Student/Play" alt="Play">
+        </map>
+    *@
 </body>
 </html>
+  
 
 
