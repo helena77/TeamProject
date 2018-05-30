@@ -136,7 +136,7 @@ namespace TeamProject.Backend
             Create(new PictureModel("defaultgirl1.png", "Girl Default2"));
             Create(new PictureModel("defaultboy1.png", "Boy Default2"));
             Create(new PictureModel("man03.jpg", "Joe", "1"));
-            Create(new PictureModel("girl6.jpg", "Olivia", "2"));
+            Create(new PictureModel("Olivia.jpg", "Olivia", "2"));
             Create(new PictureModel("girl1.jpg", "Erica", "3"));
             Create(new PictureModel("girl2.jpg", "Helena", "4"));
             Create(new PictureModel("boy1.jpg", "Daniel", "5"));
