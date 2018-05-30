@@ -40,18 +40,106 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-    } 
+    }
+
+    /* Centered In Bottom Half */
+    .bottom {
+        position: fixed;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+        /* TextArea Settings */
+        textarea {
+        width: 300px;
+        height: 575px;
+        padding: 1.6rem;
+        text-align: center;
+        border: 3px solid #ff6a00;
+        border-radius: 3px 3px 3px 3px;
+        box-shadow: 1px 1px 3px #ff6a00 inset;
+        background-color: #dfd6c9;
+        font-family: Raleway, sans-serif;
+        font-size: 1.4rem;
+        color: navy;
+        resize: none;
+        overflow: auto;
+        overflow-x: hidden;
+        opacity: 0.8;
+    }
+
+
+    /* Button Settings */
+    .button {
+        border-radius: 4px;
+        background-color: #ff6a00;
+        border: 1px solid navy;
+        color: navy;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        opacity: 0.8;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+    }
+
+    /* Button Shadow Settings */
+    .button {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4), 0 6px 20px 0 rgba(0,0,0,0.3);
+    }
+
+    /* Button Shadow Hover Settings */
+    .button:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
 
 </style>
 
 
+
+
 @* Floating Text Area for World Tour Instructions*@
 <div class="container">
-    <img src="~/Content/Images/WorldTour/InstructionsBackground.png" id="ibg" alt="World Tour" usemap="#Instructions">
+    <img src="~/Content/Images/WorldTour/InstructionsBackgroundOil.png" id="ibg" alt="World Tour" usemap="#Instructions">
     <div class="centered">
-        <h1>World Tour</h1>
-        <h1>Instructions</h1>
-        <p> To Play the Game:</p>
+        <textarea readonly>
+
+World Tour
+Instructions
+
+In each level you will visit a new city and face a new challenge.
+
+To Advance You Must:
+1. Check-in to School and Earn Coins
+2. Each Class Hour Earns more Coins
+3. Shop the Marketplace
+4. Purchase Items to Complete the Challenge
+
+For a Special Bonus:
+On-Time Arrival Earns
+Entry to the Prize Tomb
+Get a Collectible Artifact
+Can You Collect them All?
+
+To Play:
+1. Select a Gamepiece.
+2. Use the Links Below to Navigate.
+
+        </textarea>
+    </div>
+</div>
+
+
+
+@* Button Link to Select Gamepiece *@
+<div class="container">
+    <div class="bottom">
+        <a href="~/Student/Select" class="button" role="button">Begin</a>
     </div>
 </div>
 

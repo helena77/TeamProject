@@ -231,8 +231,11 @@
     <Content Include="Content\Images\WorldTour\low end.png" />
     <Content Include="Content\Images\WorldTour\mid-end.png" />
     <Content Include="Content\Images\WorldTour\InstructionsBackground.png" />
+    <Content Include="Content\Images\WorldTour\InstructionsBackgroundOil.png" />
     <Content Include="Content\Images\WorldTour\PrizeDex.png" />
+    <Content Include="Content\Images\WorldTour\PrizeDexBackground.png" />
     <Content Include="Content\Images\WorldTour\PrizeTomb.png" />
+    <Content Include="Content\Images\WorldTour\PrizeTombBackground.png" />
     <Content Include="Content\Images\WorldTour\Seattle.png" />
     <Content Include="Content\Images\WorldTour\senior.png" />
     <Content Include="Content\Pages\Admin Profile.png" />
