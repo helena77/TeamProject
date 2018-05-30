@@ -8,32 +8,50 @@
 }
 
 
-@* Margin and Padding Style *@
+@* CSS Stylesheet *@
 <style type="text/css">
 
-    body {
-        background-image: url('/Content/Images/loading page-1.png');
-        background-repeat:no-repeat;
-        color: black;
-        padding: 30px;
-        margin: 30px;
+
+    /* Borderless page style */
+    hr {
+        border: none;
     }
 
-    h1 {
-        font-family: 'Snap ITC';
-    }
-
-    #bg {
+    /* Places image as background photo */
+    #ibg {
         position: fixed;
-        top: 0;
+        top: 50px;
         left: 0;
         /* Preserve aspet ratio */
         min-width: 100%;
         min-height: 100%;
     }
 
+    /* Container holding the image and the text */
+    .container {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+
+    /* Centered text */
+    .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } 
+
 </style>
 
 
-@* Display The World Tour Title *@
-<h1>World Tour Level 1</h1>
+@* Floating Text Area for World Tour Instructions*@
+<div class="container">
+    <img src="~/Content/Images/WorldTour/InstructionsBackground.png" id="ibg" alt="World Tour" usemap="#Instructions">
+    <div class="centered">
+        <h1>World Tour</h1>
+        <h1>Instructions</h1>
+        <p> To Play the Game:</p>
+    </div>
+</div>
+
