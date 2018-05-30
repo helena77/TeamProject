@@ -220,9 +220,10 @@
     <Content Include="Content\Images\student profile background.png" />
     <Content Include="Content\Images\student profile.jpg" />
     <Content Include="Content\Images\university2.jpg" />
+    <Content Include="Content\Images\WorldTour\background-1.jpg" />
     <Content Include="Content\Images\WorldTour\Building.png" />
     <Content Include="Content\Images\dashboard pic2.png" />
-    <Content Include="Content\Images\WorldTour\coin message .png" />
+    <Content Include="Content\Images\WorldTour\coin message copy.png" />
     <Content Include="Content\Images\WorldTour\expert.png" />
     <Content Include="Content\Images\WorldTour\high-end.png" />
     <Content Include="Content\Images\WorldTour\Instructions.png" />
