@@ -222,7 +222,6 @@
     <Content Include="Content\Images\student profile.jpg" />
     <Content Include="Content\Images\university2.jpg" />
     <Content Include="Content\Images\welcomeback.gif" />
-    <Content Include="Content\Images\WorldTour\background-1.jpg" />
     <Content Include="Content\Images\WorldTour\Building.png" />
     <Content Include="Content\Images\dashboard pic2.png" />
     <Content Include="Content\Images\WorldTour\coin message copy.png" />
@@ -264,7 +263,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\PDF\report4.pdf" />
+    <Content Include="Content\PDF\OliviaReport.pdf" />
     <None Include="Properties\PublishProfiles\MCHAttendance - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\TeamProjectUHigh - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\uhigh - Web Deploy.pubxml" />
