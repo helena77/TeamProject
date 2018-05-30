@@ -1,0 +1,25 @@
+﻿@model TeamProject.Models.StudentDisplayViewModel
+@{
+    ViewBag.Title = "Confirm Logout";
+}
+
+<br />
+<h1>@Model.LastDateTime.ToShortDateString() @Model.LastDateTime.ToShortTimeString()</h1><br /><br />
+<center>
+    <h2>@Model.Name, you are now logged out.</h2><br /><br />
+    <img src="~/Content/Images/goodbye.gif" />
+
+    <h2>See you again soon!</h2><br /><br />
+
+    <h2>
+        The page will auto refresh, or Click
+        @Html.ActionLink("Exit", "Attendance", null, new { @class = "btn btn-primary btn-lg" })
+    </h2>
+</center>
+<script>
+    window.setTimeout(function () {
+        // Move to a new location or you can do something else
+        window.location.href = "../../Kiosk/Attendance";
+    }, 2800);
+
+</script>

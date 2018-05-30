@@ -51,6 +51,12 @@ namespace TeamProject.Models
         public string PictureId { get; set; }
 
         /// <summary>
+        /// DateTime of last transaction recorded, used for login and logout
+        /// </summary>
+        [Display(Name = "Date", Description = "Date and Time")]
+        public DateTime LastDateTime { get; set; }
+
+        /// <summary>
         /// The status of the student, for example currently logged in, out
         /// </summary>
         [Display(Name = "Current Status", Description = "Status of the Student")]
