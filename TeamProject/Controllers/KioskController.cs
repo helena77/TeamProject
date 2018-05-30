@@ -44,7 +44,7 @@ namespace TeamProject.Controllers
             }
 
             StudentBackend.ToggleStatusById(id);
-            return RedirectToAction("Attendance");
+            return RedirectToAction("ConfirmLogin", "Kiosk", new { id });
         }
 
         // GET: Kiosk/SetLogout/
@@ -56,7 +56,49 @@ namespace TeamProject.Controllers
             }
 
             StudentBackend.ToggleStatusById(id);
-            return RedirectToAction("Attendance");
+            return RedirectToAction("ConfirmLogout", "Kiosk", new { id });
+        }
+
+        /// <summary>
+        /// Shows the login confirmation screen
+        /// </summary>
+        /// <param name="id">Student ID</param>
+        /// <returns></returns>
+        public ActionResult ConfirmLogin(string id)
+        {
+            if (string.IsNullOrEmpty(id))
+            {
+                return RedirectToAction("Error", "Home");
+            }
+
+            var myDataList = StudentBackend.Read(id);
+            var StudentViewModel = new StudentDisplayViewModel(myDataList);
+
+            //Todo, replace with actual transition time
+            StudentViewModel.LastDateTime = DateTime.Now;
+
+            return View(StudentViewModel);
+        }
+
+        /// <summary>
+        /// Shows the login confirmation screen
+        /// </summary>
+        /// <param name="id">Student ID</param>
+        /// <returns></returns>
+        public ActionResult ConfirmLogout(string id)
+        {
+            if (string.IsNullOrEmpty(id))
+            {
+                return RedirectToAction("Error", "Home");
+            }
+
+            var myDataList = StudentBackend.Read(id);
+            var StudentViewModel = new StudentDisplayViewModel(myDataList);
+
+            //Todo, replace with actual transition time
+            StudentViewModel.LastDateTime = DateTime.Now;
+
+            return View(StudentViewModel);
         }
     }
 }

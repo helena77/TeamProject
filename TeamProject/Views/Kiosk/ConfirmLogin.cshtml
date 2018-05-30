@@ -1,0 +1,27 @@
+﻿@model TeamProject.Models.StudentDisplayViewModel
+@{
+    ViewBag.Title = "Confirm Login";
+}
+
+<br />
+<h1>@Model.LastDateTime.ToShortDateString() @Model.LastDateTime.ToShortTimeString()</h1><br /><br />
+
+<center>
+    <h2>@Model.Name, you are now logged in.</h2><br /><br />
+    <img src="~/Content/Images/welcomeback.gif" />
+
+    <h2>Welcome!</h2><br /><br />
+
+    <h2>
+        The page will auto refresh, or Click
+        @Html.ActionLink("Exit", "Attendance", null, new { @class = "btn btn-primary btn-lg" })
+    </h2>
+</center>
+<script>
+      window.setTimeout(function(){
+        // Move to a new location or you can do something else
+        window.location.href = "../../Kiosk/Attendance";
+    }, 2800);
+
+</script>
+
