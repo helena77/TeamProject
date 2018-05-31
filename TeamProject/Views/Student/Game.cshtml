@@ -9,7 +9,7 @@
 
 
 @* CSS Stylesheet *@
-<style type="text/css">
+<style>
 
 
     /* Borderless page style */
@@ -17,18 +17,26 @@
         border: none;
     }
 
+
     body {
-        background-image: url('/Content/Images/WorldTour/loading page final.png');
-        background-repeat:no-repeat;
-        padding: 0px;
-        margin: 0px;
-        max-width: 100%;
-        max-height: 100%;
+        background-image: url('/Content/Images/loading page final.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment:fixed;
+        background-size: cover;
     }
 
     /* Container holding the image and the text */
-    .container {
+    .container4 {
         position: relative;
+        width:100%;
+        padding:0;
+        margin:0;
+    }
+
+    .container4 img {
+        width:100%;
+        height:auto;
     }
 
     /* Centered In Bottom Half */
@@ -79,7 +87,12 @@
 
 
 @* Button Link to Select Gamepiece *@
-<div class="container">
+@*<div>
+    <img src="~/Content/Images/loading page final.png" id="bg" alt="">
+</div>*@
+
+<div class="container4">
+    @*<img src="~/Content/Images/loading page final.png" style="width:130%;" />*@
     <div class="bottom">
         <a href="~/Student/Play" class="button" role="button" style="color: white;">PLAY</a>
     </div>

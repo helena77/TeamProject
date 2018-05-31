@@ -194,6 +194,7 @@
     <Content Include="Content\Images\glass2.jpg" />
     <Content Include="Content\Images\goodbye.gif" />
     <Content Include="Content\Images\Kimmie_portrait.jpg" />
+    <Content Include="Content\Images\loading page final.png" />
     <Content Include="Content\Images\man03.jpg" />
     <Content Include="Content\Images\man04.jpg" />
     <Content Include="Content\Images\man05.jpg" />
@@ -225,14 +226,13 @@
     <Content Include="Content\Images\dashboard pic2.png" />
     <Content Include="Content\Images\WorldTour\coin message copy.png" />
     <Content Include="Content\Images\WorldTour\expert.png" />
-    <Content Include="Content\Images\WorldTour\game page.jpg" />
+    <Content Include="Content\Images\game page.jpg" />
     <Content Include="Content\Images\WorldTour\high-end.png" />
     <Content Include="Content\Images\WorldTour\junior.png" />
-    <Content Include="Content\Images\WorldTour\loading page final.png" />
     <Content Include="Content\Images\WorldTour\low end.png" />
     <Content Include="Content\Images\WorldTour\mid-end.png" />
-    <Content Include="Content\Images\WorldTour\prize dex.jpg" />
-    <Content Include="Content\Images\WorldTour\prize tomb with text - 2.png" />
+    <Content Include="Content\Images\prize dex.jpg" />
+    <Content Include="Content\Images\prize tomb with text - 2.png" />
     <Content Include="Content\Images\WorldTour\senior.png" />
     <Content Include="Content\Pages\Admin Profile.png" />
     <Content Include="Content\Pages\Admin Registration.png" />
