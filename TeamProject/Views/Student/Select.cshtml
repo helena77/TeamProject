@@ -30,7 +30,7 @@
 <div style="margin-top:-40px;">
     <div class="row">
         <div class="col-md-4">
-            <div class="hovereffect">
+            <div class="hovereffect2">
                 <img class="img-responsive" src='~/Content/Images/needle.jpg' alt="space needle">
                 <div class="overlay">
                     <h2>Space Needle</h2>
@@ -40,7 +40,7 @@
         </div>
 
         <div class="col-md-4">
-            <div class="hovereffect">
+            <div class="hovereffect2">
                 <img class="img-responsive" src='~/Content/Images/market.jpg' alt="pike place market">
                 <div class="overlay">
                     <h2>Pike Place Market</h2>
@@ -50,7 +50,7 @@
         </div>
 
         <div class="col-md-4">
-            <div class="hovereffect">
+            <div class="hovereffect2">
                 <img class="img-responsive" src='~/Content/Images/museum2.jpg' alt="">
                 <div class="overlay">
                     <h2>Museum of Pop Music</h2>
@@ -66,7 +66,7 @@
 
 <div class="row">
     <div class="col-md-4">
-        <div class="hovereffect">
+        <div class="hovereffect2">
             <img class="img-responsive" src='~/Content/Images/seattle2.jpg' alt="">
             <div class="overlay">
                 <h2>Seattle University</h2>
@@ -76,7 +76,7 @@
     </div>
 
     <div class="col-md-4">
-        <div class="hovereffect">
+        <div class="hovereffect2">
             <img class="img-responsive" src='~/Content/Images/university2.jpg' alt="university">
             <div class="overlay">
                 <h2>University of Washington</h2>
@@ -86,7 +86,7 @@
     </div>
 
     <div class="col-md-4">
-        <div class="hovereffect">
+        <div class="hovereffect2">
             <img class="img-responsive" src='~/Content/Images/glass2.jpg' alt="university">
             <div class="overlay">
                 <h2>Glass Museum</h2>
@@ -96,90 +96,9 @@
     </div>
 </div>
 
-<!--style for pictures-->
 <style>
-
-    .hovereffect {
-        width: 100%;
-        height: 100%;
-        float: left;
-        overflow: hidden;
-        position: relative;
-        text-align: center;
-        cursor: default;
-    }
-
-        .hovereffect .overlay {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            overflow: hidden;
-            top: 0;
-            left: 0;
-        }
-
-        .hovereffect img {
-            display: block;
-            position: relative;
-            -webkit-transition: all 0.4s ease-in;
-            transition: all 0.4s ease-in;
-        }
-
-        .hovereffect:hover img {
-            filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
-            filter: grayscale(1) blur(3px);
-            -webkit-filter: grayscale(1) blur(3px);
-            -webkit-transform: scale(1.2);
-            -ms-transform: scale(1.2);
-            transform: scale(1.2);
-        }
-
-        .hovereffect h2 {
-            text-transform: uppercase;
-            text-align: center;
-            position: relative;
-            font-size: 17px;
-            padding: 40px;
-            background: rgba(0, 0, 0, 0.6);
-            margin-top: 100px;
-        }
-
-        .hovereffect a.info {
-            display: inline-block;
-            text-decoration: none;
-            padding: 7px 14px;
-            border: 1px solid #fff;
-            margin: 50px 0 0 0;
-            background-color: transparent;
-        }
-
-            .hovereffect a.info:hover {
-                box-shadow: 0 0 5px #fff;
-            }
-
-        .hovereffect a.info, .hovereffect h2 {
-            -webkit-transform: scale(0.7);
-            -ms-transform: scale(0.7);
-            transform: scale(0.7);
-            -webkit-transition: all 0.4s ease-in;
-            transition: all 0.4s ease-in;
-            opacity: 0;
-            filter: alpha(opacity=0);
-            color: #fff;
-            text-transform: uppercase;
-        }
-
-        .hovereffect:hover a.info, .hovereffect:hover h2 {
-            opacity: 1;
-            filter: alpha(opacity=100);
-            -webkit-transform: scale(1);
-            -ms-transform: scale(1);
-            transform: scale(1);
-        }
-</style>
-
-<!--style for titles-->
-<style>
+    /*selection page of game*/
+    /*style for title*/
     #ct {
         height: 150px;
         width: 590px;
@@ -246,6 +165,86 @@
         margin: -32px 0 0 0;
         border-left: 5px solid white;
     }
+
+
+    /*style for images*/
+    .hovereffect2 {
+        width: 100%;
+        height: 100%;
+        float: left;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        cursor: default;
+    }
+
+        .hovereffect2 .overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+        }
+
+        .hovereffect2 img {
+            display: block;
+            position: relative;
+            -webkit-transition: all 0.4s ease-in;
+            transition: all 0.4s ease-in;
+        }
+
+        .hovereffect2:hover img {
+            filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
+            filter: grayscale(1) blur(3px);
+            -webkit-filter: grayscale(1) blur(3px);
+            -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+
+        .hovereffect2 h2 {
+            text-transform: uppercase;
+            text-align: center;
+            position: relative;
+            font-size: 17px;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.6);
+            margin-top: 100px;
+        }
+
+        .hovereffect2 a.info {
+            display: inline-block;
+            text-decoration: none;
+            padding: 7px 14px;
+            border: 1px solid #fff;
+            margin: 50px 0 0 0;
+            background-color: transparent;
+        }
+
+            .hovereffect2 a.info:hover {
+                box-shadow: 0 0 5px #fff;
+            }
+
+        .hovereffect2 a.info, .hovereffect2 h2 {
+            -webkit-transform: scale(0.7);
+            -ms-transform: scale(0.7);
+            transform: scale(0.7);
+            -webkit-transition: all 0.4s ease-in;
+            transition: all 0.4s ease-in;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .hovereffect2:hover a.info, .hovereffect2:hover h2 {
+            opacity: 1;
+            filter: alpha(opacity=100);
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+        }
 </style>
 
 
