@@ -218,6 +218,7 @@
     <Content Include="Content\Images\Student Dashboard\attendance record dashboard final.png" />
     <Content Include="Content\Images\Student Dashboard\game dashboard final.png" />
     <Content Include="Content\Images\Student Dashboard\welcome board final.png" />
+    <Content Include="Content\Images\Student Profile\student profile final.png" />
     <Content Include="Content\Images\UHigh.png" />
     <Content Include="Content\Images\university2.jpg" />
     <Content Include="Content\Images\welcomeback.gif" />
@@ -297,7 +298,6 @@
     <Content Include="Views\Admin\Report.cshtml" />
     <Content Include="Views\Student\Calendar.cshtml" />
     <Content Include="Views\Student\Game.cshtml" />
-    <Content Include="Views\Student\Index.cshtml" />
     <Content Include="Views\Student\Profile.cshtml" />
     <Content Include="Views\Student\Record.cshtml" />
     <Content Include="Views\Shared\_StudentLayout.cshtml" />
