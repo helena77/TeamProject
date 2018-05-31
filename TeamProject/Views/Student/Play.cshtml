@@ -1,7 +1,4 @@
-﻿
-
-
-@{
+﻿@{
     @* Using a shared layout for the Game *@
     Layout = "~/Views/Shared/_GameLayout.cshtml";
     @* Game Instruction Page *@
@@ -9,32 +6,27 @@
 }
 
 
-@* Margin and Padding Style *@
+@* CSS Stylesheet *@
 <style type="text/css">
 
-    body {
-        padding: 30px;
-        margin: 30px;
+
+    /* Borderless page style */
+    hr {
+        border: none;
     }
+
+    body {
+        background-image: url('/Content/Images/WorldTour/game page.jpg');
+        background-repeat: no-repeat;
+        padding: 0px;
+        margin: 0px;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    
 </style>
 
 
-@* Display The World Tour Title *@
-<h1>World Tour</h1>
 
-
-@* Play the game *@
-<h2>Play</h2>
-
-
-@* World Tour Instructions image *@
-<!DOCTYPE html>
-<html>
-<body>
-    <img src="~/Content/Images/WorldTour/Seattle.png" style="max-width:100%;height:auto;" alt="World Tour" usemap="#Seattle">
-    <map name="Seattle">
-        <area shape="rect" coords="370, 190, 640, 245" href="~/Student/Select" alt="Select Gamepiece">
-    </map>
-</body>
-</html>
 

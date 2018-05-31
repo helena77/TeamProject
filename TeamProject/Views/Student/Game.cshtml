@@ -17,73 +17,45 @@
         border: none;
     }
 
-    /* Places image as background photo */
-    #ibg {
-        position: fixed;
-        top: 50px;
-        left: 0;
-        /* Preserve aspet ratio */
-        min-width: 100%;
-        min-height: 100%;
+    body {
+        background-image: url('/Content/Images/WorldTour/loading page final.png');
+        background-repeat:no-repeat;
+        padding: 0px;
+        margin: 0px;
+        max-width: 100%;
+        max-height: 100%;
     }
 
     /* Container holding the image and the text */
     .container {
         position: relative;
-        text-align: center;
-        color: white;
-    }
-
-    /* Centered text */
-    .centered {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
 
     /* Centered In Bottom Half */
     .bottom {
         position: fixed;
-        top: 85%;
+        top: 65%;
         left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-        /* TextArea Settings */
-        textarea {
-        width: 300px;
-        height: 575px;
-        padding: 1.6rem;
-        text-align: center;
-        border: 3px solid #ff6a00;
-        border-radius: 3px 3px 3px 3px;
-        box-shadow: 1px 1px 3px #ff6a00 inset;
-        background-color: #dfd6c9;
-        font-family: Raleway, sans-serif;
-        font-size: 1.4rem;
-        color: navy;
-        resize: none;
-        overflow: auto;
-        overflow-x: hidden;
-        opacity: 0.8;
+        transform: translate(-30%, -30%);
     }
 
 
     /* Button Settings */
     .button {
         border-radius: 4px;
-        background-color: #ff6a00;
-        border: 1px solid navy;
-        color: navy;
-        padding: 15px 32px;
-        text-align: center;
+        background-color: #f77446;
+        border: 1px solid white;
+        color: white;
+        padding: 15px 20px;
+        text-align: right;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;
+        font-family: 'Palatino Linotype';
+        font-size: 20px;
+        font-weight: bold;
         margin: 4px 2px;
         cursor: pointer;
-        opacity: 0.8;
+        /*opacity: 0.8;*/
         -webkit-transition-duration: 0.4s; /* Safari */
         transition-duration: 0.4s;
     }
@@ -98,48 +70,18 @@
         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
     }
 
+    .button a:visited {
+        color: white;
+    }
+
 </style>
-
-
-
-
-@* Floating Text Area for World Tour Instructions*@
-<div class="container">
-    <img src="~/Content/Images/WorldTour/InstructionsBackgroundOil.png" id="ibg" alt="World Tour" usemap="#Instructions">
-    <div class="centered">
-        <textarea readonly>
-
-World Tour
-Instructions
-
-In each level you will visit a new city and face a new challenge.
-
-To Advance You Must:
-1. Check-in to School and Earn Coins
-2. Each Class Hour Earns more Coins
-3. Shop the Marketplace
-4. Purchase Items to Complete the Challenge
-
-For a Special Bonus:
-On-Time Arrival Earns
-Entry to the Prize Tomb
-Get a Collectible Artifact
-Can You Collect them All?
-
-To Play:
-1. Select a Gamepiece.
-2. Use the Links Below to Navigate.
-
-        </textarea>
-    </div>
-</div>
 
 
 
 @* Button Link to Select Gamepiece *@
 <div class="container">
     <div class="bottom">
-        <a href="~/Student/Play" class="Play" role="button">Play</a>
+        <a href="~/Student/Play" class="button" role="button" style="color: white;">PLAY</a>
     </div>
 </div>
 
