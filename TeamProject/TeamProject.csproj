@@ -184,7 +184,10 @@
     <Content Include="Content\Images\admin setting.png" />
     <Content Include="Content\Images\attendance list dashboard.png" />
     <Content Include="Content\Images\calendar on dashboard.png" />
+    <Content Include="Content\Images\calendar on dashboard1.png" />
+    <Content Include="Content\Images\calendar on dashboard2.png" />
     <Content Include="Content\Images\dashboard pic.png" />
+    <Content Include="Content\Images\dashboard pic3.png" />
     <Content Include="Content\Images\defaultboy1.png" />
     <Content Include="Content\Images\default.png" />
     <Content Include="Content\Images\defaultboy.png" />
