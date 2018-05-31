@@ -8,7 +8,7 @@ using TeamProject.Models;
 namespace TeamProject.Backend
 {
     /// <summary>
-    /// Avatar Backend handles the business logic and data for Avatars
+    /// Picture Backend handles the business logic and data for Picture
     /// </summary>
     public class PictureBackend
     {
@@ -122,7 +122,7 @@ namespace TeamProject.Backend
         /// <summary>
         /// Return the full dataset
         /// </summary>
-        /// <returns>List of Avatars</returns>
+        /// <returns>List of Pictures</returns>
         public List<PictureModel> Index()
         {
             var myData = DataSource.Index();
@@ -149,7 +149,7 @@ namespace TeamProject.Backend
         /// <summary>
         /// Helper function that returns the Picture Image URI
         /// </summary>
-        /// <param name="data">The avatarId to look up</param>
+        /// <param name="data">The PictureID to look up</param>
         /// <returns>null, or the Picture image URI</returns>
         public string GetPictureUri(string data)
         {
