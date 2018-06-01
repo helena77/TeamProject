@@ -165,7 +165,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ArchiveModel.cs" />
     <Compile Include="Models\Enum\DataSourceEnum.cs" />
+    <Compile Include="Models\Enum\GraduateStatusEnum.cs" />
     <Compile Include="Models\Enum\StudentStatusEnum.cs" />
     <Compile Include="Models\PictureModel.cs" />
     <Compile Include="Models\PIctureViewModel.cs" />
