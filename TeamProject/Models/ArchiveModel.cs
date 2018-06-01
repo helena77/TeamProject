@@ -47,7 +47,5 @@ namespace TeamProject.Models
             SYear = year;
             Status = status;
         }
-
-        public 
     }
 }
