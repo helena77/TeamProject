@@ -128,7 +128,19 @@ namespace TeamProject.Backend
         /// </summary>
         public void Initialize()
         {
-            Create(new ArchiveModel("Joel", "Romero", "2017", GraduateStatusEnum.Graduate));
+            Create(new ArchiveModel("Xavier", "Romero", "2017", GraduateStatusEnum.Graduate));
+            Create(new ArchiveModel("John", "Jones", "2017", GraduateStatusEnum.Drop));
+            Create(new ArchiveModel("Tracey", "Smith", "2017", GraduateStatusEnum.Graduate));
+            Create(new ArchiveModel("Anne", "McNeil", "2017", GraduateStatusEnum.Graduate));
+            Create(new ArchiveModel("Gillian", "Carpenter", "2017", GraduateStatusEnum.Graduate));
+            Create(new ArchiveModel("Karen", "Rogers", "2017", GraduateStatusEnum.Graduate));
+            Create(new ArchiveModel("Amy", "Sanders", "2017", GraduateStatusEnum.Graduate));
+            Create(new ArchiveModel("Kevin", "White", "2017", GraduateStatusEnum.Drop));
+            Create(new ArchiveModel("Mary", "Brown", "2017", GraduateStatusEnum.Graduate));
+            Create(new ArchiveModel("Andrew", "Smith", "2017", GraduateStatusEnum.Graduate));
+            Create(new ArchiveModel("James", "Francis", "2017", GraduateStatusEnum.Drop));
+            Create(new ArchiveModel("Karen", "Joens", "2017", GraduateStatusEnum.Graduate));
+            Create(new ArchiveModel("Jenny", "Smith", "2017", GraduateStatusEnum.Graduate));
         }
     }
 }

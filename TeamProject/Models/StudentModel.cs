@@ -69,6 +69,7 @@ namespace TeamProject.Models
         public void Initialize()
         {
             Id = Guid.NewGuid().ToString();
+            Email = "N/A";
             Status = StudentStatusEnum.Out;
         }
 
@@ -78,6 +79,14 @@ namespace TeamProject.Models
         public StudentModel()
         {
             Initialize();
+        }
+
+        public StudentModel(ArchiveModel data)
+        {
+            Id = data.Id;
+            Name = data.FName;
+            LastName = data.LName;
+            PictureId = PictureBackend.Instance.GetFirstPictureId();
         }
 
         /// <summary>

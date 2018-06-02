@@ -14,11 +14,19 @@ namespace TeamProject.Models
         /// <summary>
         /// The List of archived students
         /// </summary>
-        public List<ArchiveModel> ArcivedStudentList = new List<ArchiveModel>();
+        public List<ArchiveModel> ArciveList = new List<ArchiveModel>();
 
         /// <summary>
         /// Default constructor, needed becase of the constructor that takes a List of Archive Models
         /// </summary>
         public ArchiveViewModel() { }
+
+        public ArchiveViewModel(List<ArchiveModel> dataList)
+        {
+            foreach (var item in dataList)
+            {
+                ArciveList.Add(item);
+            }
+        }
     }
 }

@@ -19,7 +19,7 @@ namespace TeamProject.Controllers
         // A ViewModel used for the Archived student that contains the list of them
         private ArchiveViewModel ArchiveViewModel = new ArchiveViewModel();
 
-        private ArchiveBackend ArchiveBAckend = ArchiveBackend.Instance;
+        private ArchiveBackend ArchiveBackend = ArchiveBackend.Instance;
 
         // GET: Admin
         public ActionResult Dashboard()
@@ -83,7 +83,16 @@ namespace TeamProject.Controllers
             {
                 RedirectToAction("Error", "Home", "Invalid Record");
             }
-            return View(targetStudent);
+            var data = new ArchiveModel(targetStudent);
+
+            //var myData = new StudentDisplayViewModel(targetStudent);
+            //var myData2 = new ArchiveModel(new StudentModel(myData), DateTime.Now.Year.ToString(), GraduateStatusEnum.Graduate);
+            //var tuple = new Tuple<StudentDisplayViewModel, ArchiveModel>(myData, myData2);
+            //if (myData == null)
+            //{
+            //    RedirectToAction("Error", "Home", "Invalid Record");
+            //}
+            return View(data);
         }
 
         [HttpPost]
@@ -105,7 +114,8 @@ namespace TeamProject.Controllers
                 // Send to Error Page
                 return RedirectToAction("Error", new { route = "Home", action = "Error" });
             }
-            ArchiveBAckend.Create(data);
+            ArchiveBackend.Create(data);
+            StudentBackend.Delete(data.Id);
             return RedirectToAction("Students");
         }
 
@@ -282,10 +292,111 @@ namespace TeamProject.Controllers
             return RedirectToAction("Students");
         }
 
+        //GET
+        public ActionResult Remove(string id = null)
+        {
+            var ArchivedStudent = ArchiveBackend.Read(id);
+            if (ArchivedStudent == null)
+            {
+                RedirectToAction("Error", "Home", "Invalid Record");
+            }
+
+            var myData = new ArchiveModel(ArchivedStudent);
+            if (myData == null)
+            {
+                RedirectToAction("Error", "Home", "Invalid Record");
+            }
+
+            return View(myData);
+        }
+
+        [HttpPost]
+        public ActionResult Remove([Bind(Include=
+                                        "Id,"+
+                                        "FName,"+
+                                        "LName,"+
+                                        "SYear,"+
+                                        "Status,"+
+                                        "")] ArchiveModel data)
+        {
+            if (!ModelState.IsValid)
+            {
+                // Send back for edit
+                return View(data);
+            }
+            if (data == null)
+            {
+                // Send to Error page
+                return RedirectToAction("Error", new { route = "Home", action = "Error" });
+            }
+
+            if (string.IsNullOrEmpty(data.Id))
+            {
+                // Send back for Edit
+                return View(data);
+            }
+
+            ArchiveBackend.Delete(data.Id);
+
+            return RedirectToAction("ArchivePage");
+        }
+
+        public ActionResult Recover(string id = null)
+        {
+            var ArchivedStudent = ArchiveBackend.Read(id);
+            if (ArchivedStudent == null)
+            {
+                RedirectToAction("Error", "Home", "Invalid Record");
+            }
+
+            var myData = new ArchiveModel(ArchivedStudent);
+            if (myData == null)
+            {
+                RedirectToAction("Error", "Home", "Invalid Record");
+            }
+
+            return View(myData);
+        }
+
+        [HttpPost]
+        public ActionResult Recover ([Bind(Include=
+                                        "Id,"+
+                                        "FName,"+
+                                        "LName,"+
+                                        "SYear,"+
+                                        "Status,"+
+                                        "")] ArchiveModel data)
+        {
+            var myData = new StudentModel(data);
+            if (!ModelState.IsValid)
+            {
+                // Send back for edit
+                return View(data);
+            }
+            if (data == null)
+            {
+                // Send to Error page
+                return RedirectToAction("Error", new { route = "Home", action = "Error" });
+            }
+
+            if (string.IsNullOrEmpty(data.Id))
+            {
+                // Send back for Edit
+                return View(data);
+            }
+
+            StudentBackend.Create(myData);
+            ArchiveBackend.Delete(data.Id);
+            return RedirectToAction("ArchivePage");
+        }
+
         //print admin archive page
         public ActionResult ArchivePage()
         {
-            return View();
+            // Load the list of data into the StudentList
+            var myDataList = ArchiveBackend.Index();
+            var ArchiveViewModel = new ArchiveViewModel(myDataList);
+            return View(ArchiveViewModel);
         }
 
         //print admin report page

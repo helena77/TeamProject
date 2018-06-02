@@ -344,6 +344,9 @@
     <Content Include="Views\Student\Level1.cshtml" />
     <Content Include="Views\Student\Level3.cshtml" />
     <Content Include="Views\Student\GameInfo.cshtml" />
+    <Content Include="Views\Admin\Archive.cshtml" />
+    <Content Include="Views\Admin\Remove.cshtml" />
+    <Content Include="Views\Admin\Recover.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

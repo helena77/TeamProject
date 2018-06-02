@@ -38,6 +38,15 @@ namespace TeamProject.Models
         [Required(ErrorMessage = "Graduate status is required")]
         public GraduateStatusEnum Status { get; set; }
 
+        public void Initialize()
+        {
+            Id = Guid.NewGuid().ToString();
+        }
+
+        public ArchiveModel()
+        {
+            Initialize();
+        }
 
         public ArchiveModel(ArchiveModel data)
         {
@@ -46,6 +55,15 @@ namespace TeamProject.Models
             LName = data.LName;
             SYear = data.SYear;
             Status = data.Status;
+        }
+
+        public ArchiveModel(StudentModel student)
+        {
+            Id = student.Id;
+            FName = student.Name;
+            LName = student.LastName;
+            SYear = DateTime.Now.Year.ToString();
+            Status = GraduateStatusEnum.Graduate;
         }
 
         public ArchiveModel(StudentModel student, string year, GraduateStatusEnum status)

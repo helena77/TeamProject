@@ -1,0 +1,43 @@
+﻿@model TeamProject.Models.ArchiveModel
+@{
+    ViewBag.Title = "Recover";
+}
+
+<h2>Recover</h2>
+
+<div class="container">
+    <div class="row">
+        @{
+            if (Model == null)
+            {
+                <p>No Student</p>
+            }
+            else
+            {
+                <div class="row">
+                    <h2>Recover Student</h2><br /><br />
+                    <center>
+                            <span style="font-size:xx-large">
+                                @Model.FName<br /><br /><br />
+                            </span>
+                    </center>
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.HiddenFor(m => m.Id)
+                        @Html.HiddenFor(m => m.FName)
+                        @Html.HiddenFor(m => m.LName)
+                        @Html.HiddenFor(m => m.SYear)
+                        @Html.HiddenFor(m => m.Status)
+                        <center>
+                            <div class="row">
+                                @Html.ActionLink("Cancel", "ArchivePage", new { id = Model.Id }, new { @class = "btn btn-danger btn-lg active" })
+                                <input type="submit" value="Recover" class="btn btn-success btn-lg active">
+                            </div>
+                        </center>
+                    }
+                </div>
+            }
+        }
+    </div>
+</div>

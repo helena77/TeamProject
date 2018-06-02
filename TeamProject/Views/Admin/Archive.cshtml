@@ -1,0 +1,63 @@
+﻿@model TeamProject.Models.ArchiveModel
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewBag.Title = "Archive";
+}
+
+<div class="container">
+    <div class="row">
+        @{
+            if (Model == null)
+            {
+                <p>No Student</p>
+            }
+            else
+            {
+                <div class="row">
+                    <h2>Archive Student</h2><br /><br />
+                    <center>
+                        <div class="row">
+                            @*<img src="~/Content/Images/" width="300" height="300" /><br />*@
+                            <span style="font-size:xx-large">
+                                @Model.FName<br /><br /><br />
+                            </span>
+                        </div>
+                    </center>
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.HiddenFor(m => m.Id)
+                        @Html.HiddenFor(m => m.FName)
+                        @Html.HiddenFor(m => m.LName)
+                        <div class="row">
+                            <div class="col-sm-6 text-right" style="font-family:Calibri;font-size:x-large">
+                                @Html.DisplayNameFor(m => m.SYear)
+                            </div>
+                            <div class="col-sm-2" style="font-family:Calibri;font-size:x-large">
+                                @Html.EditorFor(m => m.SYear)
+                                @Html.ValidationMessageFor(m => m.SYear)
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 text-right" style="font-family:Calibri;font-size:x-large">
+                                @Html.DisplayNameFor(m => m.Status)
+                            </div>
+                            <div class="col-sm-2" style="font-family:Calibri;font-size:x-large">
+                                @Html.EnumDropDownListFor(m => m.Status, "Select Status")
+                                @Html.ValidationMessageFor(m => m.Status)
+                            </div>
+                        </div>
+                        <center>
+                            <div class="row">
+                                @Html.ActionLink("Cancel", "Students", new { id = Model.Id }, new { @class = "btn btn-success btn-lg active" })
+                                <input type="submit" value="Archive" class="btn btn-warning btn-lg active">
+                            </div>
+                        </center>
+                    }
+                </div>
+            }
+        }
+    </div>
+</div>
+
