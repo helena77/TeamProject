@@ -3,7 +3,12 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
     ViewBag.Title = "Register admin";
 }
+
+
+
+@* CSS for Registration of a New Admin *@
 <style>
+
     body {
         /* Background image is centered vertically and horizontally at all times */
         background-position: center center;
@@ -19,8 +24,7 @@
         while the background image is loading */
         background-color: whitesmoke;
     }
-</style>
-<style>
+
     .container1 {
         position: relative;
         width: 100%;
@@ -88,17 +92,21 @@
             max-width: 413px;
         }
 </style>
+
+
+
+@* Alignment for Admin Registration *@
 <center>
     <div class="container1">
         <br /><br /><br /><br />
         <img src="~/Content/Pages/Admin Registration.png" alr="Register" />
-        @Html.ActionLink("CANCEL", "Dashboard", null, new { @class = "btn-1" })
-        @Html.ActionLink("REGISTER", "Dashboard", null, new { @class = "btn-2" })
+            @Html.ActionLink("CANCEL", "Dashboard", null, new { @class = "btn-1" })
+            @Html.ActionLink("REGISTER", "Dashboard", null, new { @class = "btn-2" })
         <input type="text" size="1000" class="form-control1" placeholder="First Name" required autofocus>
-        <label for="firstName"></label>
+            <label for="firstName"></label>
         <input type="text" size="1000" class="form-control2" placeholder="Last Name" required autofocus>
-        <label for="lastName"></label>
+            <label for="lastName"></label>
         <input type="email" size="1000" class="form-control3" placeholder="Email address" required autofocus>
-        <label for="email"></label>
+            <label for="email"></label>
     </div>
 </center>
