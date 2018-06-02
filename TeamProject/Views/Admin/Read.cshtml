@@ -4,6 +4,9 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
     ViewBag.Title = "Student Info";
 }
+
+
+@* Alignment for Admin's Student View *@
 <div class="container">
     <div class="row">
         @{
@@ -44,9 +47,9 @@
                 </div><br /><br />
                 <center>
                     <div class="row">
-                            @Html.ActionLink("Cancel", "Students", new { id = Model.Id }, new { @class = "btn btn-success btn-lg active" })
-                            @Html.ActionLink("Update", "Update", new { id = Model.Id }, new { @class = "btn btn-primary btn-lg active" })
-                            @Html.ActionLink("Delete", "Delete", new { id = Model.Id }, new { @class = "btn btn-danger btn-lg active" })
+                        @Html.ActionLink("Cancel", "Students", new { id = Model.Id }, new { @class = "btn btn-success btn-lg active" })
+                        @Html.ActionLink("Update", "Update", new { id = Model.Id }, new { @class = "btn btn-primary btn-lg active" })
+                        @Html.ActionLink("Delete", "Delete", new { id = Model.Id }, new { @class = "btn btn-danger btn-lg active" })
                     </div>
                 </center><br /><br /><br />
             }
