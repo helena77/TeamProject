@@ -191,6 +191,7 @@
     <Content Include="Content\Images\defaultboy1.png" />
     <Content Include="Content\Images\default.png" />
     <Content Include="Content\Images\defaultboy.png" />
+    <Content Include="Content\Images\game info\student.png" />
     <Content Include="Content\Images\girl06.jpg" />
     <Content Include="Content\Images\girl1.jpg" />
     <Content Include="Content\Images\girl6.jpg" />
@@ -328,6 +329,9 @@
     <Content Include="Views\Admin\Overwritedatabydate.cshtml" />
     <Content Include="Views\Kiosk\ConfirmLogin.cshtml" />
     <Content Include="Views\Kiosk\ConfirmLogout.cshtml" />
+    <Content Include="Views\Student\Level1.cshtml" />
+    <Content Include="Views\Student\level3.cshtml" />
+    <Content Include="Views\Student\GameInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

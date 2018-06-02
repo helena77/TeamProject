@@ -63,6 +63,11 @@ namespace TeamProject.Controllers
             return View();
         }
 
+        public ActionResult GameInfo()
+        {
+            return View();
+        }
+
 
         // GET: WorldTour PrizeTomb
         public ActionResult PrizeTomb()
