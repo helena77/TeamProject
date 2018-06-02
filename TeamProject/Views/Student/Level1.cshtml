@@ -1,10 +1,9 @@
-﻿@{
+﻿
+@{
     @* Using a shared layout for the Game *@
-    Layout = "~/Views/Shared/_GameLayout.cshtml";
-    @* Game Instruction Page *@
-    ViewBag.Title = "Play";
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+    ViewBag.Title = "Game Level 1";
 }
-
 
 @* CSS Stylesheet *@
 <style type="text/css">
@@ -16,14 +15,16 @@
     }
 
     body {
-        background-image: url('/Content/Images/level 2.png');
+        background-image: url('/Content/Images/level 1.png');
         background-repeat: no-repeat;
         background-position: center center;
         background-attachment: fixed;
         background-size: cover;
     }
 
-    
+    footer {
+        display: none;
+    }
 </style>
 
 

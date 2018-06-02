@@ -21,7 +21,7 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Dashboard", "Dashboard", "Student")</li>
                     <li>@Html.ActionLink("Profile", "Profile", "Student")</li>
-                    <li>@Html.ActionLink("WorldTour", "Game", "Student")</li>
+                    <li>@Html.ActionLink("WorldTour", "GameInfo", "Student")</li>
                     <li>@Html.ActionLink("Record", "Record", "Student")</li>
                     <li>@Html.ActionLink("Calendar", "Calendar", "Student")</li>
                 </ul>
@@ -41,7 +41,7 @@
                 <div class="footer navbar navbar-fixed-bottom">
                     <div style="background-color:transparent">
                         <center>
-                            <div class="btn-group" style="position:center">
+                            <div class="btn-group" style="position:center; margin: 20px;">
                                 <div style="font-family:Calibri">
                                     @Html.ActionLink("Selection", "Select", "Student", new { controller = "Student" }, new { @class = "btn btn-warning btn-lg" })
                                     @Html.ActionLink("PrizeTomb", "PrizeTomb", "Student", new { controller = "Student" }, new { @class = "btn btn-warning btn-lg" })

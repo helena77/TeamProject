@@ -5,11 +5,13 @@
     ViewBag.Title = "Students";
 }
 <br /><br /><br />
+
+@* Alignment for Admin Student View *@
 <div class="container">
     <div class="row">
         <div align="right">
             @Html.ActionLink("Register", "Create", null, new { @class = "btn btn-success active" })
-            @Html.ActionLink("Archive", "Archive", null, new { @class = "btn btn-primary active" })
+            @Html.ActionLink("Archive", "ArchivePage", null, new { @class = "btn btn-primary active" })
         </div>
     </div><br />
     <div class="row text-center">

@@ -1,0 +1,65 @@
+﻿@* game process of each student *@
+
+@{
+    @* Using a shared layout for the Game *@
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+    ViewBag.Title = "GameInfo";
+}
+
+<style>
+    body {
+        margin-bottom: 20px;
+        padding: 30px;
+        margin: 30px;       
+    }
+
+    section {
+        width: 66%;
+        float: left;
+    }
+
+    aside {
+        padding: 30px;
+        width: 32%;
+        float: left;
+    }    
+
+    .image {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .level {
+        margin-top: 60px;
+        margin-left: 40px;
+        float: left;
+    }
+
+    
+</style>
+
+<h1 style="font-family: Stencil;">Hi, Olivia</h1>
+<aside>    
+    <div class="image">
+        <img src="~/Content/Images/game info/game info picture.png" width="250" height="250" />
+    </div>
+    <div class="image">
+        <img src="~/Content/Images/game info/game message.png" width="300" height="375" />
+    </div>
+</aside>
+
+<section>
+    <div class="level">
+        <a href="~/Student/Level1"><img src="~/Content/Images/game info/level 1.png" width="669" height="200"></a>
+    </div>
+    <div class="level">
+        <a href="~/Student/Game"><img src="~/Content/Images/game info/level 2.png" width="669" height="200"></a>
+    </div>
+    <div class="level">
+        <a href="~/Student/Level3"><img src="~/Content/Images/game info/level 3.png" width="669" height="200"></a>
+    </div>
+</section>
+
+
+
+

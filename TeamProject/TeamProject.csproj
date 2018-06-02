@@ -152,6 +152,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Backend\ArchiveBackend.cs" />
+    <Compile Include="Backend\ArchiveDataSourceMock.cs" />
+    <Compile Include="Backend\ArchiveInterface.cs" />
     <Compile Include="Backend\PictureBackend.cs" />
     <Compile Include="Backend\PictureDataSourceMock.cs" />
     <Compile Include="Backend\PictureInterface.cs" />
@@ -165,7 +168,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ArchiveModel.cs" />
+    <Compile Include="Models\ArchiveViewModel.cs" />
     <Compile Include="Models\Enum\DataSourceEnum.cs" />
+    <Compile Include="Models\Enum\GraduateStatusEnum.cs" />
     <Compile Include="Models\Enum\StudentStatusEnum.cs" />
     <Compile Include="Models\PictureModel.cs" />
     <Compile Include="Models\PIctureViewModel.cs" />
@@ -191,12 +197,19 @@
     <Content Include="Content\Images\defaultboy1.png" />
     <Content Include="Content\Images\default.png" />
     <Content Include="Content\Images\defaultboy.png" />
+    <Content Include="Content\Images\game info\game info picture.png" />
+    <Content Include="Content\Images\game info\game message.png" />
+    <Content Include="Content\Images\game info\level 1.png" />
+    <Content Include="Content\Images\game info\level 2.png" />
+    <Content Include="Content\Images\game info\level 3.png" />
     <Content Include="Content\Images\girl06.jpg" />
     <Content Include="Content\Images\girl1.jpg" />
     <Content Include="Content\Images\girl6.jpg" />
     <Content Include="Content\Images\glass2.jpg" />
     <Content Include="Content\Images\goodbye.gif" />
     <Content Include="Content\Images\Kimmie_portrait.jpg" />
+    <Content Include="Content\Images\level 1.png" />
+    <Content Include="Content\Images\level 2.png" />
     <Content Include="Content\Images\loading page final.png" />
     <Content Include="Content\Images\man03.jpg" />
     <Content Include="Content\Images\man04.jpg" />
@@ -320,7 +333,7 @@
     <Content Include="Views\Admin\Overwritedata.cshtml" />
     <Content Include="Views\Admin\Registeradmin.cshtml" />
     <Content Include="Views\Shared\_FooterLayout.cshtml" />
-    <Content Include="Views\Admin\Archive.cshtml" />
+    <Content Include="Views\Admin\ArchivePage.cshtml" />
     <Content Include="Views\Home\AdminLogin.cshtml" />
     <Content Include="Views\Home\StudentLogin.cshtml" />
     <Content Include="Views\Home\KioskLogin.cshtml" />
@@ -328,6 +341,9 @@
     <Content Include="Views\Admin\Overwritedatabydate.cshtml" />
     <Content Include="Views\Kiosk\ConfirmLogin.cshtml" />
     <Content Include="Views\Kiosk\ConfirmLogout.cshtml" />
+    <Content Include="Views\Student\Level1.cshtml" />
+    <Content Include="Views\Student\Level3.cshtml" />
+    <Content Include="Views\Student\GameInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
