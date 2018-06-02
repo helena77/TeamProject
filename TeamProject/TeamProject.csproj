@@ -152,6 +152,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Backend\ArchiveBackend.cs" />
+    <Compile Include="Backend\ArchiveDataSourceMock.cs" />
+    <Compile Include="Backend\ArchiveInterface.cs" />
     <Compile Include="Backend\PictureBackend.cs" />
     <Compile Include="Backend\PictureDataSourceMock.cs" />
     <Compile Include="Backend\PictureInterface.cs" />
@@ -323,7 +326,7 @@
     <Content Include="Views\Admin\Overwritedata.cshtml" />
     <Content Include="Views\Admin\Registeradmin.cshtml" />
     <Content Include="Views\Shared\_FooterLayout.cshtml" />
-    <Content Include="Views\Admin\Archive.cshtml" />
+    <Content Include="Views\Admin\ArchivePage.cshtml" />
     <Content Include="Views\Home\AdminLogin.cshtml" />
     <Content Include="Views\Home\StudentLogin.cshtml" />
     <Content Include="Views\Home\KioskLogin.cshtml" />

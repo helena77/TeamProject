@@ -39,6 +39,15 @@ namespace TeamProject.Models
         public GraduateStatusEnum Status { get; set; }
 
 
+        public ArchiveModel(ArchiveModel data)
+        {
+            Id = data.Id;
+            FName = data.FName;
+            LName = data.LName;
+            SYear = data.SYear;
+            Status = data.Status;
+        }
+
         public ArchiveModel(StudentModel student, string year, GraduateStatusEnum status)
         {
             Id = student.Id;
@@ -46,6 +55,34 @@ namespace TeamProject.Models
             LName = student.LastName;
             SYear = year;
             Status = status;
+        }
+
+        public ArchiveModel(string firstname, string lastname, string year, GraduateStatusEnum status)
+        {
+            Id = Guid.NewGuid().ToString();
+            FName = firstname;
+            LName = lastname;
+            SYear = year;
+            Status = status;
+        }
+
+        /// <summary>
+        /// Update the Data Fields with the values passed in, do not update the ID.
+        /// </summary>
+        /// <param name="data">The values to update</param>
+        /// <returns>False if null, else true</returns>
+        public bool Update(ArchiveModel data)
+        {
+            if (data == null)
+            {
+                return false;
+            }
+
+            FName = data.FName;
+            LName = data.LName;
+            SYear = data.SYear;
+            Status = data.Status;
+            return true;
         }
     }
 }
