@@ -30,11 +30,24 @@ namespace TeamProject.Controllers
         }
 
 
-        // GET: Student Access to the WorldTour Game
+        // GET: Student Access to the WorldTour Current Game
         public ActionResult Game()
         {
             return View();
         }
+
+        // GET: Student Access to the WorldTour previous level Game
+        public ActionResult Level1()
+        {
+            return View();
+        }
+
+        // GET: Student Access to the WorldTour next level Game
+        public ActionResult Level3()
+        {
+            return View();
+        }
+
 
 
         // GET: Student Attendance Records

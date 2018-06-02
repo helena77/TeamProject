@@ -208,6 +208,8 @@
     <Content Include="Content\Images\glass2.jpg" />
     <Content Include="Content\Images\goodbye.gif" />
     <Content Include="Content\Images\Kimmie_portrait.jpg" />
+    <Content Include="Content\Images\level 1.png" />
+    <Content Include="Content\Images\level 2.png" />
     <Content Include="Content\Images\loading page final.png" />
     <Content Include="Content\Images\man03.jpg" />
     <Content Include="Content\Images\man04.jpg" />
@@ -340,7 +342,7 @@
     <Content Include="Views\Kiosk\ConfirmLogin.cshtml" />
     <Content Include="Views\Kiosk\ConfirmLogout.cshtml" />
     <Content Include="Views\Student\Level1.cshtml" />
-    <Content Include="Views\Student\level3.cshtml" />
+    <Content Include="Views\Student\Level3.cshtml" />
     <Content Include="Views\Student\GameInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>

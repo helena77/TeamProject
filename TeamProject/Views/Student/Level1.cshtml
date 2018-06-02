@@ -1,7 +1,32 @@
 ﻿
 @{
-    ViewBag.Title = "Level1";
+    @* Using a shared layout for the Game *@
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+    ViewBag.Title = "Game Level 1";
 }
 
-<h2>Level1</h2>
+@* CSS Stylesheet *@
+<style type="text/css">
+
+
+    /* Borderless page style */
+    hr {
+        border: none;
+    }
+
+    body {
+        background-image: url('/Content/Images/level 1.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    footer {
+        display: none;
+    }
+</style>
+
+
+
 
