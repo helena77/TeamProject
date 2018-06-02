@@ -16,6 +16,11 @@ namespace TeamProject.Controllers
         // The Backend Data source
         private StudentBackend StudentBackend = StudentBackend.Instance;
 
+        // A ViewModel used for the Archived student that contains the list of them
+        private ArchiveViewModel ArchiveViewModel = new ArchiveViewModel();
+
+        private ArchiveBackend ArchiveBAckend = ArchiveBackend.Instance;
+
         // GET: Admin
         public ActionResult Dashboard()
         {
@@ -28,11 +33,11 @@ namespace TeamProject.Controllers
             return View();
         }
 
-        // GET: Student
         /// <summary>
         /// Students, the page that shows all the Students
         /// </summary>
         /// <returns></returns>
+        // GET: Students
         public ActionResult Students()
         {
             // Load the list of data into the StudentList
@@ -40,6 +45,8 @@ namespace TeamProject.Controllers
             var StudentViewModel = new StudentViewModel(myDataList);
             return View(StudentViewModel);
         }
+
+
 
         /// <summary>
         /// Read information on a single Student
@@ -62,6 +69,44 @@ namespace TeamProject.Controllers
             }
 
             return View(myData);
+        }
+        /// <summary>
+        /// This opens up the archive a current student screen
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        // GET: Admin/Archive
+        public ActionResult Archive(string id = null)
+        {
+            var targetStudent = StudentBackend.Read(id);
+            if (targetStudent == null)
+            {
+                RedirectToAction("Error", "Home", "Invalid Record");
+            }
+            return View(targetStudent);
+        }
+
+        [HttpPost]
+        public ActionResult Archive([Bind(Include=
+                                    "Id,"+
+                                    "FName,"+
+                                    "LName,"+
+                                    "SYear,"+
+                                    "Status,"+
+                                    "")] ArchiveModel data)
+        {
+            if (!ModelState.IsValid)
+            {
+                // Send back for edit
+                return View(data);
+            }
+            if (data == null)
+            {
+                // Send to Error Page
+                return RedirectToAction("Error", new { route = "Home", action = "Error" });
+            }
+            ArchiveBAckend.Create(data);
+            return RedirectToAction("Students");
         }
 
         /// <summary>
@@ -238,7 +283,7 @@ namespace TeamProject.Controllers
         }
 
         //print admin archive page
-        public ActionResult Archive()
+        public ActionResult ArchivePage()
         {
             return View();
         }

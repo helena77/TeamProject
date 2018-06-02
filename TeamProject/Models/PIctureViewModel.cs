@@ -15,6 +15,5 @@ namespace TeamProject.Models
         /// The List of Picture
         /// </summary>
         public List<PictureModel> AvatarList = new List<PictureModel>();
-        public int ListLevel;
     }
 }
