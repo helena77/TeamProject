@@ -29,6 +29,11 @@ namespace TeamProject.Controllers
             return View();
         }
 
+        // GET: WorldTour Level Seattle
+        public ActionResult GameInfo()
+        {
+            return View();
+        }
 
         // GET: Student Access to the WorldTour Current Game
         public ActionResult Game()
@@ -38,6 +43,12 @@ namespace TeamProject.Controllers
 
         // GET: Student Access to the WorldTour previous level Game
         public ActionResult Level1()
+        {
+            return View();
+        }
+
+        // GET: level 1 collection
+        public ActionResult Collection()
         {
             return View();
         }
@@ -70,17 +81,13 @@ namespace TeamProject.Controllers
         }
 
 
-        // GET: WorldTour Level Seattle
+        // GET: WorldTour Level egypt
         public ActionResult Play()
         {
             return View();
         }
 
-        public ActionResult GameInfo()
-        {
-            return View();
-        }
-
+ 
 
         // GET: WorldTour PrizeTomb
         public ActionResult PrizeTomb()
