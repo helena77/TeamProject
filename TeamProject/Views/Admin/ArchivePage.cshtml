@@ -1,4 +1,4 @@
-﻿
+﻿@model TeamProject.Models.ArchiveViewModel
 @{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
     ViewBag.Title = "Archive Page";
@@ -26,156 +26,47 @@
 @* Table for Archived Student Information *@
 <h2>Archived Student Data</h2><br /><br />
 
-<table>
-    <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Email</th>
-        <th>School Year</th>
-        <th>Graduation Status</th>
-        <th>Action</th>
-    </tr>
-    <tr>
-        <td>Vilia</td>
-        <td>Wang</td>
-        <td>wangv@seattleu.edu</td>
-        <td>2017</td>
-        <td>Graduate</td>
-        <td>
-            <button type="button" class="btn btn-success btn-xs" disabled>Recover</button>
-            <button type="button" class="btn btn-danger btn-xs">Delete</button>&ensp;
-        </td>
-    </tr>
-    <tr>
-        <td>John</td>
-        <td>Jones</td>
-        <td>jonesj@seattleu.edu</td>
-        <td>2017</td>
-        <td>Drop</td>
-        <td>
-            <button type="button" class="btn btn-success btn-xs">Recover</button>
-            <button type="button" class="btn btn-danger btn-xs">Delete</button>
-        </td>
-    </tr>
-    <tr>
-        <td>Tracey</td>
-        <td>Smith</td>
-        <td>smitht@seattleu.edu</td>
-        <td>2017</td>
-        <td>Graduate</td>
-        <td>
-            <button type="button" class="btn btn-success btn-xs" disabled>Recover</button>
-            <button type="button" class="btn btn-danger btn-xs">Delete</button>
-        </td>
-    </tr>
-    <tr>
-        <td>Anne</td>
-        <td>McNeil</td>
-        <td>mcneila@seattleu.edu</td>
-        <td>2017</td>
-        <td>Graduate</td>
-        <td>
-            <button type="button" class="btn btn-success btn-xs" disabled>Recover</button>
-            <button type="button" class="btn btn-danger btn-xs">Delete</button>
-        </td>
-    </tr>
-    <tr>
-        <td>Gillian</td>
-        <td>Carpenter</td>
-        <td>carpenterg@seattleu.edu</td>
-        <td>2017</td>
-        <td>Graduate</td>
-        <td>
-            <button type="button" class="btn btn-success btn-xs" disabled>Recover</button>
-            <button type="button" class="btn btn-danger btn-xs">Delete</button>
-        </td>
-    </tr>
-    <tr>
-        <td>Karen</td>
-        <td>Rogers</td>
-        <td>rogersk@seattleu.edu</td>
-        <td>2017</td>
-        <td>Graduate</td>
-        <td>
-            <button type="button" class="btn btn-success btn-xs" disabled>Recover</button>
-            <button type="button" class="btn btn-danger btn-xs">Delete</button>
-        </td>
-    </tr>
-    <tr>
-        <td>Amy</td>
-        <td>Sanders</td>
-        <td>sandersa@seattleu.edu</td>
-        <td>2017</td>
-        <td>Graduate</td>
-        <td>
-            <button type="button" class="btn btn-success btn-xs" disabled>Recover</button>
-            <button type="button" class="btn btn-danger btn-xs">Delete</button>
-        </td>
-    </tr>
-    <tr>
-        <td>Kevin</td>
-        <td>White</td>
-        <td>whitek@seattleu.edu</td>
-        <td>2017</td>
-        <td>Drop</td>
-        <td>
-            <button type="button" class="btn btn-success btn-xs">Recover</button>
-            <button type="button" class="btn btn-danger btn-xs">Delete</button>
-        </td>
-    </tr>
-    <tr>
-        <td>Mary</td>
-        <td>Brown</td>
-        <td>brownm@seattleu.edu</td>
-        <td>2017</td>
-        <td>Graduate</td>
-        <td>
-            <button type="button" class="btn btn-success btn-xs" disabled>Recover</button>
-            <button type="button" class="btn btn-danger btn-xs">Delete</button>
-        </td>
-    </tr>
-    <tr>
-        <td>Andrew</td>
-        <td>Smith</td>
-        <td>smitha@seattleu.edu</td>
-        <td>2017</td>
-        <td>Graduate</td>
-        <td>
-            <button type="button" class="btn btn-success btn-xs" disabled>Recover</button>
-            <button type="button" class="btn btn-danger btn-xs">Delete</button>
-        </td>
-    </tr>
-    <tr>
-        <td>James</td>
-        <td>Francis</td>
-        <td>francisj@seattleu.edu</td>
-        <td>2017</td>
-        <td>Drop</td>
-        <td>
-            <button type="button" class="btn btn-success btn-xs">Recover</button>
-            <button type="button" class="btn btn-danger btn-xs">Delete</button>
-        </td>
-    </tr>
-    <tr>
-        <td>Karen</td>
-        <td>Jones</td>
-        <td>jonesk@seattleu.edu</td>
-        <td>2017</td>
-        <td>Graduate</td>
-        <td>
-            <button type="button" class="btn btn-success btn-xs" disabled>Recover</button>
-            <button type="button" class="btn btn-danger btn-xs">Delete</button>
-        </td>
-    </tr>
-    <tr>
-        <td>Jenny</td>
-        <td>Smith</td>
-        <td>smithj@seattleu.edu</td>
-        <td>2017</td>
-        <td>Graduate</td>
-        <td>
-            <button type="button" class="btn btn-success btn-xs" disabled>Recover</button>
-            <button type="button" class="btn btn-danger btn-xs">Delete</button>
-        </td>
-    </tr>
-</table>
+@{
+    if (Model.ArciveList == null || !Model.ArciveList.Any())
+    {
+        <br />
+        <p>No Students in the System</p>
+        <br />
+    }
+    else
+    {
+        <table>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>School Year</th>
+                <th>Graduation Status</th>
+                <th>Action</th>
+            </tr>
+            @{
+                foreach (var item in Model.ArciveList)
+                {
+                    <tr>
+                        <td>@item.FName</td>
+                        <td>@item.LName</td>
+                        <td>@item.SYear</td>
+                        <td>@item.Status</td>
+                        <td>
+                            @{
+                                if (item.Status == TeamProject.Models.GraduateStatusEnum.Graduate)
+                                {
+                                    <button type="button" class="btn btn-success btn-xs" disabled>Recover</button>
+                                }
+                                else
+                                {
+                                    @Html.ActionLink("Recover", "Recover", new { id = @item.Id }, new { @class = "btn btn-success btn-xs" })
+                                }
+                            }
+                            @Html.ActionLink("Remove", "Remove", new { id = @item.Id }, new { @class = "btn btn-danger btn-xs" })&ensp;
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    }
+}

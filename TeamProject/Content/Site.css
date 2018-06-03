@@ -1388,3 +1388,9 @@ h6 {
     }
 
 
+.minitext {
+    color:lightgray; 
+   position:relative; 
+   text-align: center; 
+   margin-bottom: 20px;
+}
